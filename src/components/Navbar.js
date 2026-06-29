@@ -1,9 +1,9 @@
 /* eslint-disable jsx-a11y/alt-text */
 
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import { Menu } from "@headlessui/react";
-import { useTranslation } from "react-i18next";
+import React,{useState,useEffect} from "react";
+import {Link} from "react-router-dom";
+import {Menu} from "@headlessui/react";
+import {useTranslation} from "react-i18next";
 import i18n from "i18next";
 
 import logo from "../assets/logo.jpg";
@@ -16,102 +16,45 @@ const [mobileDestOpen,setMobileDestOpen]=useState(false);
 const [scrolled,setScrolled]=useState(false);
 const [scrollProgress,setScrollProgress]=useState(0);
 
-
 const {t}=useTranslation();
 
 
 
 const destinations=[
-
-{
-name:"Aberdare National Park",
-path:"/aberdare"
-},
-
-{
-name:"Meru National Park",
-path:"/meru"
-},
-
-{
-name:"Amboseli National Park",
-path:"/amboseli"
-},
-
-{
-name:"Nairobi National Park",
-path:"/nairobipark"
-},
-
-{
-name:"Mount Kenya",
-path:"/mountkenya"
-},
-
-{
-name:"Hell’s Gate",
-path:"/hellsgate"
-},
-
-{
-name:"Tsavo East",
-path:"/tsavoeast"
-},
-
-{
-name:"Tsavo West",
-path:"/tsavowest"
-},
-
-{
-name:"Lake Nakuru",
-path:"/lakenakuru"
-}
-
+{ name:"Aberdare National Park",path:"/aberdare"},
+{ name:"Meru National Park",path:"/meru"},
+{ name:"Amboseli National Park",path:"/amboseli"},
+{ name:"Nairobi National Park",path:"/nairobipark"},
+{ name:"Mount Kenya",path:"/mountkenya"},
+{ name:"Hell’s Gate",path:"/hellsgate"},
+{ name:"Tsavo East",path:"/tsavoeast"},
+{ name:"Tsavo West",path:"/tsavowest"},
+{ name:"Lake Nakuru",path:"/lakenakuru"}
 ];
-
 
 
 
 
 useEffect(()=>{
 
-
 const scroll=()=>{
-
 
 const top=window.scrollY;
 
-const height=
-document.documentElement.scrollHeight -
-window.innerHeight;
+const height=document.documentElement.scrollHeight-window.innerHeight;
 
-
-setScrollProgress(
-(top/height)*100
-);
-
+setScrollProgress((top/height)*100);
 
 setScrolled(top>50);
-
 
 };
 
 
-window.addEventListener(
-"scroll",
-scroll
-);
+window.addEventListener("scroll",scroll);
 
-
-return()=>window.removeEventListener(
-"scroll",
-scroll
-);
-
+return()=>window.removeEventListener("scroll",scroll);
 
 },[]);
-
 
 
 
@@ -123,14 +66,9 @@ const lang=e.target.value;
 
 i18n.changeLanguage(lang);
 
-localStorage.setItem(
-"lang",
-lang
-);
+localStorage.setItem("lang",lang);
 
 };
-
-
 
 
 
@@ -145,51 +83,23 @@ setMobileDestOpen(false);
 
 
 
+const navItem=
+"text-white px-3 py-2 rounded-xl bg-white/5 hover:text-yellow-400 hover:bg-white/10 transition";
 
-const linkStyle=
-`
-text-white/90
-hover:text-yellow-300
-transition
-px-3
-py-2
-rounded-lg
-bg-black/40
-`;
 
 
 
 
 return(
 
-
 <>
 
 
-{/* SCROLL BAR */}
+{/* TOP PROGRESS */}
 
-<div className="
-fixed
-top-0
-left-0
-w-full
-h-[3px]
-z-[999]
-">
+<div className="fixed top-0 left-0 w-full h-[3px] z-[999]">
 
-<div
-
-className="
-h-full
-bg-yellow-400
-transition-all
-"
-
-style={{
-width:`${scrollProgress}%`
-}}
-
-/>
+<div className="h-full bg-yellow-400 transition-all" style={{width:`${scrollProgress}%`}}/>
 
 </div>
 
@@ -197,229 +107,92 @@ width:`${scrollProgress}%`
 
 
 
-{/* NAVBAR */}
 
-<nav
-
-className={`
-fixed
-top-0
-left-0
-w-full
-z-50
-border-b
-border-white/10
-backdrop-blur-xl
-
-transition-all
-duration-500
-
-
-${scrolled
-?
-"bg-black/80 py-2"
-:
-"bg-black py-4"
-}
-
-`}
-
->
+<nav className={`fixed top-0 left-0 w-full z-50 backdrop-blur-xl border-b border-white/10 transition duration-500 ${scrolled?"bg-black/90 py-2":"bg-black/70 py-4"}`}>
 
 
 
-<div className="
-max-w-7xl
-mx-auto
-px-4
-md:px-8
-">
 
+<div className="max-w-7xl mx-auto px-4 md:px-8">
 
-<div className="
-h-20
-flex
-items-center
-justify-between
-">
+<div className="h-20 flex items-center justify-between">
 
 
 
 {/* LOGO */}
 
-
-<Link
-to="/"
-className="
-flex
-items-center
-gap-3
-">
+<Link to="/" className="flex items-center gap-3">
 
 
-<img
-
-src={logo}
-
-className="
-w-11
-h-11
-rounded-full
-border
-border-yellow-400
-"
-
-/>
+<img src={logo} className="w-11 h-11 rounded-full border border-yellow-400 object-cover"/>
 
 
-<span
-className="
-text-yellow-300
-font-bold
-"
->
+<div>
 
-Renlen Tours Safari
+<h2 className="text-yellow-300 font-bold">
+Renlen Tours
+</h2>
 
-</span>
-
-
-</Link>
-
-
-
-
-
-
-
-{/* DESKTOP */}
-
-
-<div className="
-hidden
-md:flex
-items-center
-gap-5
-">
-
-
-
-<Link
-className={linkStyle}
-to="/"
->
-
-{t("home")}
-
-</Link>
-
-
-
-
-
-{/* DROPDOWN */}
-
-<Menu
-as="div"
-className="relative"
->
-
-
-<Menu.Button
-className={linkStyle}
->
-
-{t("destinations")} ▾
-
-</Menu.Button>
-
-
-
-
-<Menu.Items
-
-className="
-absolute
-top-full
-left-0
-mt-3
-w-72
-
-bg-black
-
-rounded-xl
-
-border
-border-white/10
-
-shadow-2xl
-
-overflow-hidden
-
-"
-
->
-
-
-
-<div
-className="
-px-4
-py-3
-text-yellow-400
-font-bold
-border-b
-border-white/10
-"
->
-
-Explore Parks
+<p className="text-yellow-400 text-xs">
+Safari Adventures
+</p>
 
 </div>
 
 
+</Link>
 
 
 
-{
-destinations.map((d,i)=>(
 
 
-<Menu.Item key={i}>
+
+{/* DESKTOP MENU */}
+
+<div className="hidden md:flex items-center gap-4">
 
 
-<Link
+<Link to="/" className={navItem}>
+{t("home")}
+</Link>
 
-to={d.path}
 
-className="
-block
-px-4
-py-3
-text-gray-300
-hover:bg-yellow-400/10
-hover:text-yellow-300
-transition
-"
 
->
+
+<Menu as="div" className="relative">
+
+
+<Menu.Button className={navItem}>
+{t("destinations")} ▾
+</Menu.Button>
+
+
+
+<Menu.Items className="absolute top-12 left-0 w-72 bg-black rounded-xl border border-white/10 shadow-xl overflow-hidden">
+
+
+<div className="px-4 py-3 text-yellow-400 font-bold border-b border-white/10">
+Explore Parks
+</div>
+
+
+
+{destinations.map(d=>(
+
+<Menu.Item key={d.path}>
+
+<Link to={d.path} className="block px-4 py-3 text-gray-300 hover:text-yellow-400 hover:bg-white/5">
 
 {d.name}
 
 </Link>
 
-
 </Menu.Item>
 
-
-))
-
-}
-
+))}
 
 
 </Menu.Items>
-
 
 
 </Menu>
@@ -428,79 +201,33 @@ transition
 
 
 
-
-<Link
-className={linkStyle}
-to="/gallery"
->
-
+<Link to="/gallery" className={navItem}>
 {t("gallery")}
-
 </Link>
 
 
-
-<Link
-className={linkStyle}
-to="/vehicles"
->
-
+<Link to="/vehicles" className={navItem}>
 {t("vehicles")}
-
 </Link>
 
 
-
-
-<Link
-className={linkStyle}
-to="/contact"
->
-
+<Link to="/contact" className={navItem}>
 {t("contact")}
-
 </Link>
 
 
 
 
 
+<select value={i18n.language} onChange={changeLanguage} className="bg-black text-white border border-white/20 rounded-full px-3 py-2">
 
-<select
+<option value="en">🇬🇧 English</option>
 
-onChange={changeLanguage}
+<option value="fr">🇫🇷 French</option>
 
-value={i18n.language}
+<option value="de">🇩🇪 German</option>
 
-className="
-bg-black
-text-white
-border
-border-white/20
-px-3
-py-2
-rounded-lg
-"
-
->
-
-
-<option value="en">
-English
-</option>
-
-<option value="fr">
-French
-</option>
-
-<option value="de">
-German
-</option>
-
-<option value="es">
-Spanish
-</option>
-
+<option value="es">🇪🇸 Spanish</option>
 
 </select>
 
@@ -508,22 +235,9 @@ Spanish
 
 
 
-<a
+<a href="https://wa.me/254717554177" className="bg-yellow-400 text-black px-5 py-2 rounded-full font-bold">
 
-href="https://wa.me/254717554177"
-
-className="
-bg-yellow-400
-text-black
-px-5
-py-2
-rounded-full
-font-bold
-"
-
->
-
-{t("bookNow")}
+🚀 {t("bookNow")}
 
 </a>
 
@@ -537,32 +251,42 @@ font-bold
 
 
 
-{/* MOBILE BUTTON */}
+{/* MOBILE */}
+
+<div className="md:hidden flex items-center gap-3">
 
 
-<button
+<select value={i18n.language} onChange={changeLanguage} className="bg-white/10 text-white border border-white/20 rounded-full px-2 py-2 text-xs">
 
-onClick={()=>setMenuOpen(true)}
+<option value="en">🇬🇧</option>
 
-className="
-md:hidden
-text-white
-text-3xl
-"
+<option value="fr">🇫🇷</option>
 
->
+<option value="de">🇩🇪</option>
+
+<option value="es">🇪🇸</option>
+
+</select>
+
+
+
+
+
+<button onClick={()=>setMenuOpen(true)} className="text-white text-3xl">
 
 ☰
 
 </button>
 
 
+</div>
+
 
 
 </div>
 
-
 </div>
+
 
 
 
@@ -573,26 +297,15 @@ text-3xl
 
 {/* MOBILE OVERLAY */}
 
-{
+{menuOpen && (
 
-menuOpen &&
+<div onClick={closeMobile} className="fixed inset-0 bg-black/70 backdrop-blur-sm z-40 md:hidden"/>
 
-<div
+)}
 
-onClick={closeMobile}
 
-className="
-fixed
-inset-0
-bg-black/70
-backdrop-blur-sm
-md:hidden
-z-40
-"
 
-/>
 
-}
 
 
 
@@ -600,121 +313,39 @@ z-40
 
 {/* MOBILE DRAWER */}
 
-
-<div
-
-
-className={`
-
-fixed
-top-0
-right-0
-
-h-full
-
-w-[90%]
-
-max-w-sm
-
-bg-gradient-to-b
-from-[#07140d]
-via-black
-to-black
+<div className={`fixed top-0 right-0 h-full w-[88%] max-w-sm bg-[#121212] border-l border-white/10 z-50 transition duration-500 md:hidden ${menuOpen?"translate-x-0":"translate-x-full"}`}>
 
 
-z-50
-
-
-transition-all
-duration-500
-
-md:hidden
-
-
-${menuOpen
-?
-"translate-x-0"
-:
-"translate-x-full"
-
-}
-
-`}
-
->
+<div className="p-5 flex justify-between items-center border-b border-white/10">
 
 
 
+<div className="flex items-center gap-3">
 
 
-<div className="
-p-6
-flex
-justify-between
-items-center
-border-b
-border-white/10
-">
-
-
-<div className="
-flex
-items-center
-gap-3
-">
-
-
-<img
-src={logo}
-
-className="
-w-12
-h-12
-rounded-full
-border
-border-yellow-400
-"
-
-/>
+<img src={logo} className="w-11 h-11 rounded-full border border-yellow-400"/>
 
 
 <div>
 
-<h2 className="
-text-white
-font-bold
-">
-
+<h2 className="text-white font-bold">
 Renlen Tours
-
 </h2>
 
-<p className="
-text-yellow-400
-text-xs
-">
-
+<p className="text-yellow-400 text-xs">
 Safari Adventures
-
 </p>
 
-</div>
-
 
 </div>
 
+</div>
 
 
-<button
 
-onClick={closeMobile}
 
-className="
-text-white
-text-3xl
-"
 
->
+<button onClick={closeMobile} className="text-white text-3xl">
 
 ✕
 
@@ -730,31 +361,10 @@ text-3xl
 
 
 
-<div className="
-p-6
-space-y-4
-text-white
-">
+<div className="p-5 space-y-4">
 
 
-
-
-
-<Link
-
-to="/"
-
-onClick={closeMobile}
-
-className="
-block
-bg-white/5
-px-4
-py-3
-rounded-xl
-"
-
->
+<Link to="/" onClick={closeMobile} className="block p-4 rounded-xl bg-white/5 text-white">
 
 🏠 {t("home")}
 
@@ -763,39 +373,11 @@ rounded-xl
 
 
 
-
-
-
-<button
-
-onClick={()=>setMobileDestOpen(!mobileDestOpen)}
-
-className="
-w-full
-flex
-justify-between
-bg-white/5
-px-4
-py-3
-rounded-xl
-"
-
->
-
-
-<span>
+<button onClick={()=>setMobileDestOpen(!mobileDestOpen)} className="w-full flex justify-between p-4 rounded-xl bg-white/5 text-white">
 
 🌍 {t("destinations")}
 
-</span>
-
-
-<span>
-
-⌄
-
-</span>
-
+<span>⌄</span>
 
 </button>
 
@@ -803,78 +385,30 @@ rounded-xl
 
 
 
+{mobileDestOpen && (
 
+<div className="bg-white/5 rounded-xl p-3 space-y-2">
 
-{
+{destinations.map(d=>(
 
-mobileDestOpen &&
-
-
-<div className="
-bg-white/5
-rounded-xl
-p-3
-space-y-2
-">
-
-
-{
-
-destinations.map((d,i)=>(
-
-
-<Link
-
-key={i}
-
-to={d.path}
-
-onClick={closeMobile}
-
-className="
-block
-px-3
-py-2
-text-gray-300
-hover:text-yellow-400
-"
-
->
+<Link key={d.path} to={d.path} onClick={closeMobile} className="block px-3 py-2 text-gray-300 hover:text-yellow-400">
 
 🦁 {d.name}
 
 </Link>
 
-
-))
-
-
-}
-
-
+))}
 
 </div>
 
-
-}
-
+)}
 
 
 
 
 
 
-<Link
-to="/gallery"
-onClick={closeMobile}
-className="
-block
-bg-white/5
-px-4
-py-3
-rounded-xl
-"
->
+<Link to="/gallery" onClick={closeMobile} className="block p-4 rounded-xl bg-white/5 text-white">
 
 📸 {t("gallery")}
 
@@ -883,20 +417,7 @@ rounded-xl
 
 
 
-
-<Link
-to="/vehicles"
-onClick={closeMobile}
-
-className="
-block
-bg-white/5
-px-4
-py-3
-rounded-xl
-"
-
->
+<Link to="/vehicles" onClick={closeMobile} className="block p-4 rounded-xl bg-white/5 text-white">
 
 🚙 {t("vehicles")}
 
@@ -906,19 +427,7 @@ rounded-xl
 
 
 
-<Link
-to="/contact"
-onClick={closeMobile}
-
-className="
-block
-bg-white/5
-px-4
-py-3
-rounded-xl
-"
-
->
+<Link to="/contact" onClick={closeMobile} className="block p-4 rounded-xl bg-white/5 text-white">
 
 📞 {t("contact")}
 
@@ -928,76 +437,11 @@ rounded-xl
 
 
 
-
-
-
-<select
-
-onChange={changeLanguage}
-
-value={i18n.language}
-
-className="
-w-full
-bg-black
-border
-border-white/20
-rounded-xl
-px-4
-py-3
-text-white
-"
-
->
-
-
-<option value="en">
-🇬🇧 English
-</option>
-
-<option value="fr">
-🇫🇷 French
-</option>
-
-<option value="de">
-🇩🇪 German
-</option>
-
-<option value="es">
-🇪🇸 Spanish
-</option>
-
-
-</select>
-
-
-
-
-
-
-
-<a
-
-href="https://wa.me/254717554177"
-
-className="
-block
-text-center
-bg-yellow-400
-text-black
-font-bold
-py-4
-rounded-full
-"
-
->
+<a href="https://wa.me/254717554177" className="block text-center bg-yellow-400 text-black font-bold py-4 rounded-full">
 
 🚀 {t("bookNow")}
 
 </a>
-
-
-
 
 
 </div>
@@ -1013,12 +457,9 @@ rounded-full
 </nav>
 
 
-
 </>
 
-
-);
-
+)
 
 }
 
