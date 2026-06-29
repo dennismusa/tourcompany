@@ -81,7 +81,7 @@ function Contact() {
             <div className="space-y-3 text-gray-300">
               <p>📍 Kajiado, Kenya</p>
               <p>📞  +254 717 554177</p>
-              <p>✉ info@yourdomain.com</p>
+              <p>✉ info@renlentours.com</p>
             </div>
 
             <a
