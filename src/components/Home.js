@@ -6,29 +6,33 @@ import useLanguageSync from "../hooks/useLanguageSync";
 import { useTranslation } from "react-i18next";
 
 //import cruiser1 from "../assets/cruiser1.jpg";
-//import cruiser2 from "../assets/cruiser2.jpg";
+import cruiser2 from "../assets/cruiser2.jpg";
 import image1 from "../assets/image1.jpg";
 import nakuru from "../assets/nakuru.jpg";
-import image3 from "../assets/image3.jpg";
+import image16 from "../assets/image16.jpg";
 import image4 from "../assets/image4.jpg";
-import image5 from "../assets/image5.jpg";
+import image22 from "../assets/image22.jpg";
 import west from "../assets/west.jpg";
 import amboseli from "../assets/amboseli.jpg";
 import climbingkenya from "../assets/climbingkenya.jpg";
 import climbinglongonot from "../assets/climbinglongonot.jpg";
 import climbingkili from "../assets/climbingkili.jpg";
-//import image8 from "../assets/image8.jpg";
+import meru from "../assets/meru.jpg";
 import hellsgate from "../assets/hellsgate.jpg";
 import gorilla from "../assets/gorilla.jpg";
 import serengeti from "../assets/serengeti.jpg";
 import tanzania from "../assets/tanzania.jpg";
 import Wilderbeast from "../assets/Wilderbeast.jpg";
 import kenya from "../assets/kenya.jpg";
-import image12 from "../assets/image12.jpg";
+import image17 from "../assets/image17.jpg";
 function Home() {
   useLanguageSync();
-  const images = [image1, image12, image3, image4, image5];
+  const images = [meru, kenya,amboseli,Wilderbeast];
   const [index, setIndex] = useState(0);
+const aboutImages = [cruiser2,image17,image16,nakuru,west,amboseli];
+const [aboutIndex,setAboutIndex]=useState(0);
+const [smallAboutIndex,setSmallAboutIndex]=useState(1);
+
 
   // ================= REVIEWS STATE =================
   const [reviews, setReviews] = useState([]);
@@ -41,136 +45,135 @@ const [loading, setLoading] = useState(false);
 const [loadingReviews, setLoadingReviews] = useState(false);
 const [success, setSuccess] = useState(false);
 
-const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyACVav3SoF1trHeLZyVfmIYF6ZyBJ82fcgFVpwD4jneDp4BjuNG3cUSbY91OW6S6rhJQ/exec";
- 
-
- 
-  // ================= LOAD REVIEWS (IMPORTANT PART 1) =================
-  useEffect(() => {
-    fetch(GOOGLE_SCRIPT_URL)
-      .then((res) => res.json())
-      .then((data) => {
-        setReviews(data.reverse()); // newest first
-      })
-      .catch((err) => console.log("Error loading reviews:", err));
-  }, []);
 
   // ================= SLIDER =================
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIndex((prev) => (prev + 1) % images.length);
-    }, 3500);
+  useEffect(()=>{
 
-    return () => clearInterval(interval);
-  }, [images.length]);
+const slider=setInterval(()=>{
+
+// HERO SLIDER
+setIndex(prev=>(prev + 1) % images.length);
+
+// ABOUT SLIDER
+setAboutIndex(prev=>(prev + 1) % aboutImages.length);
+setSmallAboutIndex(prev=>(prev + 1) % aboutImages.length);
+
+},4000);
+
+
+
+    return () => clearInterval(slider);
+  }, [aboutImages.length, images.length]);
 
   // ================= SUBMIT REVIEW (IMPORTANT PART 2) =================
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    if (!name || !message) return;
-
-    const review = {
-      name,
-      message,
-      rating,
-      date: new Date().toISOString(),
-    };
-
-    try {
-      await fetch(GOOGLE_SCRIPT_URL, {
-  method: "POST",
-  body: JSON.stringify(review),
-});
-
+ 
 // instantly update UI
-setReviews((prev) => [review, ...prev]);
-
-setSuccess(true);
-setTimeout(() => setSuccess(false), 3000);
-
-      setName("");
-      setMessage("");
-      setRating(5);
-    } catch (error) {
-      console.log(error);
-    }
-  };   
 
   
   return (
     <div className="bg-white text-gray-800 overflow-x-hidden">
       
-<section id="home" className="relative min-h-[80vh] max-h-[850px] flex items-center overflow-hidden">
+<section id="home" className="relative min-h-[65vh] lg:min-h-[75vh] flex items-center overflow-hidden">
+
+
+{/* IMAGE SLIDER */}
 
 <div className="absolute inset-0">
-{images.map((img,i)=>
-<div key={i} className="absolute inset-0 transition-all duration-[2500ms]" style={{backgroundImage:`url(${img})`,backgroundSize:"cover",backgroundPosition:"center",opacity:i===index?1:0,transform:i===index?"scale(1)":"scale(1.08)"}}/>
-)}
-</div>
 
-<div className="absolute inset-0 bg-black/55"/>
-<div className="absolute inset-0 bg-gradient-to-r from-[#05120D]/95 via-black/60 to-transparent"/>
-<div className="absolute inset-0 bg-[linear-gradient(to_top,rgba(0,0,0,.9),transparent)]"/>
+{images.map((img,i)=>(
 
-
-<div className="relative z-20 max-w-7xl mx-auto px-6 lg:px-10 w-full">
-
-<div className="max-w-4xl text-white">
-
-<div className="inline-flex items-center gap-3 px-5 py-2 rounded-full border border-emerald-400/20 bg-emerald-500/10 mb-8">
-
-<div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"/>
-
-<span className="text-xs tracking-[4px] uppercase text-emerald-300">
-Renlen Tours & Safaris
-</span>
-</div>
-<h1 className="text-5xl sm:text-6xl lg:text-7xl font-black leading-[1.05]">
-{t("heroTitle")}
-</h1>
-<p className="mt-8 text-gray-300 text-lg leading-8 max-w-2xl">
-{t("heroDesc")}
-</p>
-<div className="mt-10 flex flex-wrap gap-5">
-
-<a href="https://wa.me/+254717554177" className="bg-emerald-500 hover:bg-emerald-400 text-black px-8 py-4 rounded-xl font-bold transition hover:scale-105 shadow-xl">
-{t("bookNow")}
-</a>
-
-
-<Link to="/gallery" className="px-8 py-4 rounded-xl backdrop-blur-xl bg-white/10 border border-white/10 hover:bg-white hover:text-black transition">
-{t("exploreTours")}
-</Link>
-
-</div>
-
-
-
-
-
-</div>
-
-</div>
-
-
-
-
-
-<div className="absolute right-8 top-1/2 -translate-y-1/2 hidden lg:flex flex-col gap-3 z-30">
-
-{images.map((_,i)=>(
-
-<button
+<div
 key={i}
-onClick={()=>setIndex(i)}
-className={`transition-all rounded-full ${i===index?"h-10 w-3 bg-emerald-400":"w-3 h-3 bg-white/40"}`}
+className="absolute inset-0 transition-all duration-[3500ms] ease-in-out"
+style={{
+backgroundImage:`url(${img})`,
+backgroundSize:"cover",
+backgroundPosition:"center",
+opacity:i===index?1:0,
+transform:i===index?"scale(1)":"scale(1.06)"
+}}
 />
 
 ))}
 
 </div>
+{/* DARK LAYERS */}
 
+<div className="absolute inset-0 bg-black/50"/>
+
+<div className="absolute inset-0 bg-gradient-to-r from-[#022c22]/95 via-black/60 to-transparent"/>
+
+<div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"/>
+{/* ANIMATED LIGHT */}
+
+<div className="absolute -top-32 -left-32 w-[450px] h-[450px] bg-emerald-500/20 rounded-full blur-[120px] animate-pulse"/>
+
+<div className="absolute bottom-[-150px] right-[-100px] w-[500px] h-[500px] bg-yellow-400/10 rounded-full blur-[130px]"/>
+{/* CONTENT */}
+
+<div className="relative z-20 max-w-7xl mx-auto px-5 md:px-8 w-full">
+
+
+<div className="max-w-2xl text-white">
+{/* BADGE */}
+
+<div className="inline-flex items-center gap-3 px-5 py-2 rounded-full bg-white/10 backdrop-blur-xl border border-emerald-300/30 mb-5 animate-bounce">
+<div className="w-2 h-2 rounded-full bg-emerald-400 animate-ping"/>
+<span className="text-[10px] md:text-xs uppercase tracking-[4px] text-emerald-200">
+
+Renlen Tours & Safaris
+</span></div>
+<h1 className="text-3xl sm:text-4xl md:text-5xl font-black leading-tight max-w-xl drop-shadow-xl">
+
+{t("heroTitle")}
+
+</h1>
+<p className="mt-4 text-gray-200 text-sm sm:text-base leading-7 max-w-lg">
+
+{t("heroDesc")}
+
+</p>{/* ACTION BUTTONS */}
+<div className="mt-6 flex flex-col sm:flex-row gap-3">
+<a
+href="https://wa.me/+254717554177"
+className="group relative overflow-hidden bg-gradient-to-r from-emerald-400 to-emerald-600 text-black px-6 py-3 rounded-full font-bold text-sm transition-all duration-500 hover:scale-110 hover:shadow-2xl hover:shadow-emerald-400/40 text-center"
+>
+<span className="relative z-10">
+
+{t("bookNow")}
+
+</span>
+<span className="absolute inset-0 bg-white/40 translate-x-[-120%] group-hover:translate-x-[120%] transition duration-700"/>
+</a>
+</div>
+{/* TRUST TAGS */}
+<div className="mt-8 flex flex-wrap gap-3">
+</div></div></div>
+{/* SLIDER DOTS */}
+
+<div className="absolute right-6 top-1/2 -translate-y-1/2 hidden lg:flex flex-col gap-3">
+
+{images.map((_,i)=>(
+
+<button
+
+key={i}
+
+onClick={()=>setIndex(i)}
+
+className={`rounded-full transition-all duration-700 ${
+i===index
+?
+"h-12 w-2 bg-yellow-400 shadow-lg shadow-yellow-400/50"
+:
+"h-2 w-2 bg-white/40 hover:bg-white"
+}`}
+
+/>
+
+))}
+</div>
+{/* BOTTOM GLASS PANEL */}
 
 </section>
 
@@ -179,51 +182,52 @@ className={`transition-all rounded-full ${i===index?"h-10 w-3 bg-emerald-400":"w
 {/* ABOUT / EXPERIENCE SECTION */}
 <section className="relative py-28 overflow-hidden bg-[#F6FAF8]">
 
-{/* Background decoration */}
-<div className="absolute top-0 right-0 w-[500px] h-[500px] bg-emerald-100 rounded-full blur-3xl opacity-40"></div>
-<div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-emerald-50 rounded-full blur-3xl"></div>
+<div className="absolute top-0 right-0 w-[500px] h-[500px] bg-emerald-100 rounded-full blur-3xl opacity-40"/>
 
+<div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-emerald-50 rounded-full blur-3xl"/>
 <div className="relative max-w-7xl mx-auto px-6 lg:px-10">
-
 <div className="grid lg:grid-cols-[1fr_1.1fr] gap-20 items-center">
+{/* IMAGES */}
 
-{/* IMAGE SECTION */}
 <div className="relative">
+{/* MAIN SLIDER IMAGE */}
 
-{/* Main image */}
-<div className="overflow-hidden rounded-[40px] shadow-2xl">
+<div className="group overflow-hidden rounded-[40px] shadow-2xl">
 
 <img
-src={images[index]}
-alt="Safari Tour"
-className="w-full h-[550px] object-cover hover:scale-110 transition duration-[2000ms]"
+
+src={aboutImages[aboutIndex]}
+
+alt="Safari Experience"
+
+className="w-full h-[520px] object-cover transition-all duration-[2000ms] group-hover:scale-110"
+
 />
-
-<div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent"></div>
-
-</div>
+<div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent"/>
 
 
-{/* Small overlay image */}
+</div>{/* FLOATING SLIDER IMAGE */}
 <div className="hidden md:block absolute -bottom-10 -right-10 w-[230px] h-[280px] overflow-hidden rounded-[30px] border-[8px] border-white shadow-2xl">
 
-<img
-src={images[(index+1)%images.length]}
-alt=""
-className="w-full h-full object-cover"
+
+<img 
+src={image22}
+alt="Safari"
+className="w-full h-full object-cover transition duration-[2000ms] hover:scale-110"
 />
 </div>
+{/* EXPERIENCE BADGE */}
 
-
-{/* Experience badge */}
 
 <div className="absolute top-8 left-8 bg-white/95 backdrop-blur-xl px-6 py-5 rounded-3xl shadow-xl">
+
 
 <h2 className="text-4xl font-black text-emerald-500">
 
 10+
 
 </h2>
+
 
 <p className="text-gray-700 text-sm">
 
@@ -232,69 +236,66 @@ Years Experience
 </p></div></div>
 {/* CONTENT */}
 <div>
-
 <span className="uppercase tracking-[5px] text-emerald-500 font-bold">
 
 ABOUT RENLEN TOURS
 
 </span>
 <h2 className="text-4xl md:text-6xl font-black leading-tight mt-6 text-gray-900">
+
 Journey Beyond
+
 <span className="block text-emerald-500">
 
 Ordinary Travel
 
 </span>
+
 </h2>
-
-
 <p className="mt-8 text-gray-600 leading-8 text-lg">
 
-Renlen Tours and Safaris creates unforgettable wildlife
-experiences across Kenya and East Africa with premium
-vehicles, expert guides and carefully designed safari
-packages.
+Renlen Tours and Safaris creates unforgettable wildlife experiences across Kenya and East Africa with premium vehicles, expert guides and carefully designed safari packages.
 
-Explore Maasai Mara,  Tsavo, Serengeti and
-Zanzibar while enjoying comfort, safety and authentic
-adventures.
+Explore Maasai Mara, Tsavo, Serengeti and Zanzibar while enjoying comfort, safety and authentic adventures.
 
 </p>
-
-
-{/* Feature list */}
-
+{/* FEATURES */}
 <div className="space-y-6 mt-10">
+
+
 <div className="flex items-start gap-4">
+
 <div className="w-14 h-14 rounded-2xl bg-emerald-100 flex items-center justify-center text-2xl">
 
 🚙
 
-</div><div>
+</div>
+
+
+<div>
 
 <h3 className="font-bold text-lg">
 
 Luxury Safari Vehicles
 
 </h3>
-
 <p className="text-gray-600">
 
 Modern Land Cruisers and safari vans.
+</p>
+</div>
 
-</p></div></div>
-<div className="flex items-start gap-4">
-
+</div><div className="flex items-start gap-4">
 <div className="w-14 h-14 rounded-2xl bg-emerald-100 flex items-center justify-center text-2xl">
 
 🦁
+
 </div><div>
 <h3 className="font-bold text-lg">
 
 Professional Guides
 
 </h3>
-
 <p className="text-gray-600">
 
 Local experts with wildlife experience.
@@ -305,21 +306,16 @@ Local experts with wildlife experience.
 
 🌍
 
-</div><div>
-
+</div>
+<div>
 <h3 className="font-bold text-lg">
-
 East Africa Adventures
-
 </h3>
-
 <p className="text-gray-600">
 
 Kenya and Tanzania combined safari packages.
 
-</p></div></div></div></div></div>
-{/* Statistics strip */}
-</div>
+</p></div></div></div></div></div></div>
 </section>
 
 
