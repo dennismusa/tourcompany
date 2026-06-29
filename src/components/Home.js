@@ -72,16 +72,13 @@ setSmallAboutIndex(prev=>(prev + 1) % aboutImages.length);
   
   return (
     <div className="bg-white text-gray-800 overflow-x-hidden">
+
+
       
 <section id="home" className="relative min-h-[65vh] lg:min-h-[75vh] flex items-center overflow-hidden">
-
-
 {/* IMAGE SLIDER */}
-
 <div className="absolute inset-0">
-
 {images.map((img,i)=>(
-
 <div
 key={i}
 className="absolute inset-0 transition-all duration-[3500ms] ease-in-out"
@@ -134,17 +131,7 @@ Renlen Tours & Safaris
 
 </p>{/* ACTION BUTTONS */}
 <div className="mt-6 flex flex-col sm:flex-row gap-3">
-<a
-href="https://wa.me/+254717554177"
-className="group relative overflow-hidden bg-gradient-to-r from-emerald-400 to-emerald-600 text-black px-6 py-3 rounded-full font-bold text-sm transition-all duration-500 hover:scale-110 hover:shadow-2xl hover:shadow-emerald-400/40 text-center"
->
-<span className="relative z-10">
 
-{t("bookNow")}
-
-</span>
-<span className="absolute inset-0 bg-white/40 translate-x-[-120%] group-hover:translate-x-[120%] transition duration-700"/>
-</a>
 </div>
 {/* TRUST TAGS */}
 <div className="mt-8 flex flex-wrap gap-3">
