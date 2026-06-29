@@ -154,34 +154,6 @@ Renlen Tours & Safaris
 </div>
 
 
-<div className="absolute bottom-0 left-0 right-0 z-30 backdrop-blur-xl bg-black/40 border-t border-white/10">
-
-<div className="max-w-7xl mx-auto px-6 py-5">
-
-<div className="grid grid-cols-2 md:grid-cols-4 gap-5 text-center">
-
-{[
-"🦁 bigFive",
-"🚙 luxuryVans",
-"🌍 kenyaTanzania",
-"⭐ trustedGuides"
-].map((item,i)=>{
-
-const [icon,text]=item.split(" ");
-
-return(
-<p key={i} className="text-emerald-400 font-semibold">
-{icon} {t(text)}
-</p>
-)
-
-})}
-
-</div>
-
-</div>
-
-</div>
 
 
 
