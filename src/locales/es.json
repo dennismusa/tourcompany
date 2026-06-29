@@ -4,19 +4,117 @@
   "gallery": "Gallery",
   "vehicles": "Vehicles",
   "contact": "Contact",
+  "book": "Book Safari",
   "bookNow": "Book Safari Now",
 
   "heroTitle": "Explore Kenya With Luxury Safari Vehicles",
-  "heroDesc": "Reliable safari transport in Amboseli, Tsavo & Chyulu Hills with comfort, safety, and expert local guides.",
+  "heroDesc": "Discover Kenya and East Africa with premium safari experiences, comfortable vehicles, and expert local guides. Enjoy safe, reliable, and unforgettable journeys through iconic wildlife destinations.",
 
   "aboutTitle": "About Renlen Tours Safari",
-  "aboutText": "We provide unforgettable Kenya safari experiences with professional guides and comfortable vehicles.",
+  "aboutText": "We create unforgettable safari experiences across Kenya and East Africa with professional guides, luxury vehicles, and carefully designed travel adventures.",
+
+  "aboutSubtitle": "Journey beyond ordinary travel",
+
+  "featureLuxuryVehiclesTitle": "Luxury Safari Vehicles",
+  "featureLuxuryVehiclesDesc": "Modern Land Cruisers and comfortable safari vans.",
+
+  "featureGuidesTitle": "Professional Guides",
+  "featureGuidesDesc": "Local experts with deep wildlife experience.",
+
+  "featureEastAfricaTitle": "East Africa Adventures",
+  "featureEastAfricaDesc": "Combined Kenya and Tanzania safari packages.",
 
   "destinationTitle": "Explore Our Destinations",
+  "destinationSubtitle": "Handpicked safari destinations across East Africa",
 
-  "servicesTitle": "Our Safari Services",
+  "amboseli": "Amboseli National Park",
+  "amboseliDesc": "Elephants with views of Mount Kilimanjaro.",
 
-  "contactTitle": "Contact Us",
+  "tsavoEast": "Tsavo East National Park",
+  "tsavoEastDesc": "Red elephants and vast wilderness landscapes.",
 
-  "footerText": "Experience the beauty of Kenya with us."
+  "tsavoWest": "Tsavo West National Park",
+  "tsavoWestDesc": "Dramatic scenery and volcanic landscapes.",
+
+  "nairobiPark": "Nairobi National Park",
+  "nairobiParkDesc": "Wildlife just outside the city skyline.",
+
+  "lakeNakuru": "Lake Nakuru National Park",
+  "lakeNakuruDesc": "Flamingos, rhinos, and Rift Valley views.",
+
+  "mountKenya": "Mount Kenya",
+  "mountKenyaDesc": "Scenic alpine landscapes and hiking routes.",
+
+  "maasaiMara": "Maasai Mara National Reserve",
+  "maasaiMaraDesc": "Home of the Big Five and the Great Migration.",
+
+  "serengeti": "Serengeti (Tanzania)",
+  "serengetiDesc": "Endless plains and world-famous wildlife migration.",
+
+  "trekTitle": "Trekking & Climbing East Africa",
+  "trekDesc": "Discover iconic mountains, volcanic craters, and scenic landscapes.",
+
+  "kilimanjaro": "Mount Kilimanjaro",
+  "kilimanjaroDesc": "Africa’s highest peak with world-famous trekking routes.",
+
+  "mountLongonot": "Mount Longonot",
+  "mountLongonotDesc": "Volcanic crater hike with Rift Valley views.",
+
+  "hellsGate": "Hell’s Gate National Park",
+  "hellsGateDesc": "Hiking, cycling, and dramatic geothermal landscapes.",
+
+  "whyChoose": "Why Choose Us",
+  "whyChooseTitle": "More Than A Safari",
+  "whyChooseSubtitle": "An unforgettable experience",
+  "whyChooseDesc": "We deliver personalized safari journeys with comfort, safety, and expert local knowledge.",
+
+  "comfort": "Comfortable Safari Vehicles",
+  "guides": "Professional Local Guides",
+  "experience": "Years of Safari Experience",
+  "safety": "Safety and Reliability",
+
+  "reviewsTitle": "Traveler Reviews",
+  "reviewsSubtitle": "Real experiences from our guests",
+  "ratingText": "4.7 Rating • Google Reviews",
+  "writeReview": "Write a Google Review",
+  "viewReviews": "View All Reviews",
+
+  "footerText": "Experience the beauty of Kenya with us.",
+
+  "unveilingTitle": "Unveiling East Africa",
+  "exploreAfrica": "Explore Africa’s",
+  "iconicDestinations": "Iconic Destinations",
+  "scrollDescription": "Scroll through curated safari experiences across Kenya, Tanzania, Uganda, and beyond.",
+
+  "migrationTitle": "Wilderbeast Migration",
+  "migrationTrips": "6 Trips",
+  "migrationDesc": "Serengeti & Great Migration",
+
+  "gorillaTitle": "Uganda Gorilla Trek",
+  "gorillaTrips": "4 Trips",
+  "gorillaDesc": "Rainforest encounters",
+
+  "kenyaTitle": "Kenya Safaris",
+  "kenyaTrips": "23 Trips",
+  "kenyaDesc": "Maasai Mara Big Five",
+
+  "serengetiTitle": "Serengeti Experience",
+  "serengetiTrips": "8 Trips",
+  "serengetiDesc": "Endless wildlife plains",
+
+  "rwenzoriTitle": "Rwenzori Trails",
+  "rwenzoriTrips": "3 Trips",
+  "rwenzoriDesc": "Mountain trekking routes",
+
+  "tanzaniaTitle": "Tanzania Safaris",
+  "tanzaniaTrips": "6 Trips",
+  "tanzaniaDesc": "Serengeti & Great Migration",
+
+  "premium": "Premium",
+  "adventure": "Adventure",
+  "popular": "Popular",
+  "iconic": "Iconic",
+  "hiking": "Hiking",
+
+  "swipeMore": "Swipe for more"
 }
