@@ -169,140 +169,109 @@ i===index
 {/* ABOUT / EXPERIENCE SECTION */}
 <section className="relative py-28 overflow-hidden bg-[#F6FAF8]">
 
-<div className="absolute top-0 right-0 w-[500px] h-[500px] bg-emerald-100 rounded-full blur-3xl opacity-40"/>
+  <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-emerald-100 rounded-full blur-3xl opacity-40" />
+  <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-emerald-50 rounded-full blur-3xl" />
 
-<div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-emerald-50 rounded-full blur-3xl"/>
-<div className="relative max-w-7xl mx-auto px-6 lg:px-10">
-<div className="grid lg:grid-cols-[1fr_1.1fr] gap-20 items-center">
-{/* IMAGES */}
+  <div className="relative max-w-7xl mx-auto px-6 lg:px-10">
 
-<div className="relative">
-{/* MAIN SLIDER IMAGE */}
+    <div className="grid lg:grid-cols-[1fr_1.1fr] gap-20 items-center">
 
-<div className="group overflow-hidden rounded-[40px] shadow-2xl">
+      {/* IMAGES */}
+      <div className="relative">
 
-<img
+        <div className="group overflow-hidden rounded-[40px] shadow-2xl">
+          <img
+            src={aboutImages[aboutIndex]}
+            alt={t("aboutTitle")}
+            className="w-full h-[520px] object-cover transition-all duration-[2000ms] group-hover:scale-110"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent" />
+        </div>
 
-src={aboutImages[aboutIndex]}
+        <div className="hidden md:block absolute -bottom-10 -right-10 w-[230px] h-[280px] overflow-hidden rounded-[30px] border-[8px] border-white shadow-2xl">
+          <img
+            src={image22}
+            alt={t("aboutTitle")}
+            className="w-full h-full object-cover transition duration-[2000ms] hover:scale-110"
+          />
+        </div>
 
-alt="Safari Experience"
+        <div className="absolute top-8 left-8 bg-white/95 backdrop-blur-xl px-6 py-5 rounded-3xl shadow-xl">
+          <h2 className="text-4xl font-black text-emerald-500">10+</h2>
+          <p className="text-gray-700 text-sm">
+            {t("experienceYears") || "Years Experience"}
+          </p>
+        </div>
 
-className="w-full h-[520px] object-cover transition-all duration-[2000ms] group-hover:scale-110"
+      </div>
 
-/>
-<div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent"/>
+      {/* CONTENT */}
+      <div>
 
+        <span className="uppercase tracking-[5px] text-emerald-500 font-bold">
+          {t("aboutTitle")}
+        </span>
 
-</div>{/* FLOATING SLIDER IMAGE */}
-<div className="hidden md:block absolute -bottom-10 -right-10 w-[230px] h-[280px] overflow-hidden rounded-[30px] border-[8px] border-white shadow-2xl">
+        <h2 className="text-4xl md:text-6xl font-black leading-tight mt-6 text-gray-900">
+          {t("aboutHeadline")}
+        </h2>
 
+        <p className="mt-8 text-gray-600 leading-8 text-lg">
+          {t("aboutText")}
+        </p>
 
-<img 
-src={image22}
-alt="Safari"
-className="w-full h-full object-cover transition duration-[2000ms] hover:scale-110"
-/>
-</div>
-{/* EXPERIENCE BADGE */}
+        {/* FEATURES */}
+        <div className="space-y-6 mt-10">
 
+          <div className="flex items-start gap-4">
+            <div className="w-14 h-14 rounded-2xl bg-emerald-100 flex items-center justify-center text-2xl">
+              🚙
+            </div>
+            <div>
+              <h3 className="font-bold text-lg">
+                {t("featureLuxuryTitle") || "Luxury Safari Vehicles"}
+              </h3>
+              <p className="text-gray-600">
+                {t("featureLuxuryDesc") || "Modern Land Cruisers and safari vans."}
+              </p>
+            </div>
+          </div>
 
-<div className="absolute top-8 left-8 bg-white/95 backdrop-blur-xl px-6 py-5 rounded-3xl shadow-xl">
+          <div className="flex items-start gap-4">
+            <div className="w-14 h-14 rounded-2xl bg-emerald-100 flex items-center justify-center text-2xl">
+              🦁
+            </div>
+            <div>
+              <h3 className="font-bold text-lg">
+                {t("featureGuidesTitle") || "Professional Guides"}
+              </h3>
+              <p className="text-gray-600">
+                {t("featureGuidesDesc") || "Local experts with wildlife experience."}
+              </p>
+            </div>
+          </div>
 
+          <div className="flex items-start gap-4">
+            <div className="w-14 h-14 rounded-2xl bg-emerald-100 flex items-center justify-center text-2xl">
+              🌍
+            </div>
+            <div>
+              <h3 className="font-bold text-lg">
+                {t("featureAdventureTitle") || "East Africa Adventures"}
+              </h3>
+              <p className="text-gray-600">
+                {t("featureAdventureDesc") || "Kenya and Tanzania combined safari packages."}
+              </p>
+            </div>
+          </div>
 
-<h2 className="text-4xl font-black text-emerald-500">
+        </div>
 
-10+
+      </div>
 
-</h2>
+    </div>
 
-
-<p className="text-gray-700 text-sm">
-
-Years Experience
-
-</p></div></div>
-{/* CONTENT */}
-<div>
-<span className="uppercase tracking-[5px] text-emerald-500 font-bold">
-
-ABOUT RENLEN TOURS
-
-</span>
-<h2 className="text-4xl md:text-6xl font-black leading-tight mt-6 text-gray-900">
-
-Journey Beyond
-
-<span className="block text-emerald-500">
-
-Ordinary Travel
-
-</span>
-
-</h2>
-<p className="mt-8 text-gray-600 leading-8 text-lg">
-
-Renlen Tours and Safaris creates unforgettable wildlife experiences across Kenya and East Africa with premium vehicles, expert guides and carefully designed safari packages.
-
-Explore Maasai Mara, Tsavo, Serengeti and Zanzibar while enjoying comfort, safety and authentic adventures.
-
-</p>
-{/* FEATURES */}
-<div className="space-y-6 mt-10">
-
-
-<div className="flex items-start gap-4">
-
-<div className="w-14 h-14 rounded-2xl bg-emerald-100 flex items-center justify-center text-2xl">
-
-🚙
-
-</div>
-
-
-<div>
-
-<h3 className="font-bold text-lg">
-
-Luxury Safari Vehicles
-
-</h3>
-<p className="text-gray-600">
-
-Modern Land Cruisers and safari vans.
-</p>
-</div>
-
-</div><div className="flex items-start gap-4">
-<div className="w-14 h-14 rounded-2xl bg-emerald-100 flex items-center justify-center text-2xl">
-
-🦁
-
-</div><div>
-<h3 className="font-bold text-lg">
-
-Professional Guides
-
-</h3>
-<p className="text-gray-600">
-
-Local experts with wildlife experience.
-
-</p></div></div>
-<div className="flex items-start gap-4">
-<div className="w-14 h-14 rounded-2xl bg-emerald-100 flex items-center justify-center text-2xl">
-
-🌍
-
-</div>
-<div>
-<h3 className="font-bold text-lg">
-East Africa Adventures
-</h3>
-<p className="text-gray-600">
-
-Kenya and Tanzania combined safari packages.
-
-</p></div></div></div></div></div></div>
+  </div>
 </section>
 
 
@@ -318,18 +287,22 @@ Kenya and Tanzania combined safari packages.
 
     {/* HEADER */}
     <div className="text-center max-w-3xl mx-auto mb-16">
+
       <span className="text-xs tracking-[0.4em] uppercase text-yellow-400 border border-yellow-400/20 px-5 py-2 rounded-full bg-white/5">
-        Unveiling East Africa
+        {t("unveilingTitle")}
       </span>
 
       <h2 className="text-4xl md:text-6xl font-black mt-6 leading-[1.1]">
-        Explore Africa’s
-        <span className="block text-yellow-400">Iconic Destinations</span>
+        {t("exploreAfrica")}
+        <span className="block text-yellow-400">
+          {t("iconicDestinations")}
+        </span>
       </h2>
 
       <p className="mt-6 text-gray-300 leading-8">
-        Scroll through curated safari experiences across Kenya, Tanzania, Uganda, and beyond.
+        {t("scrollDescription")}
       </p>
+
     </div>
 
     {/* HORIZONTAL SCROLL */}
@@ -338,45 +311,45 @@ Kenya and Tanzania combined safari packages.
       {[
         {
           img: Wilderbeast,
-          title: "Wilderbeast Migration",
-          trips: "6 Trips",
-          desc: "Serengeti & Great Migration",
-          tag: "Premium"
+          title: t("migrationTitle"),
+          trips: t("migrationTrips"),
+          desc: t("migrationDesc"),
+          tag: t("premium")
         },
         {
           img: gorilla,
-          title: "Uganda Gorilla Trek",
-          trips: "4 Trips",
-          desc: "Rainforest encounters",
-          tag: "Adventure"
+          title: t("gorillaTitle"),
+          trips: t("gorillaTrips"),
+          desc: t("gorillaDesc"),
+          tag: t("adventure")
         },
         {
           img: kenya,
-          title: "Kenya Safaris",
-          trips: "23 Trips",
-          desc: "Maasai Mara Big Five",
-          tag: "Popular"
+          title: t("kenyaTitle"),
+          trips: t("kenyaTrips"),
+          desc: t("kenyaDesc"),
+          tag: t("popular")
         },
         {
           img: serengeti,
-          title: "Serengeti Experience",
-          trips: "8 Trips",
-          desc: "Endless wildlife plains",
-          tag: "Iconic"
+          title: t("serengetiTitle"),
+          trips: t("serengetiTrips"),
+          desc: t("serengetiDesc"),
+          tag: t("iconic")
         },
         {
           img: climbinglongonot,
-          title: "Rwenzori Trails",
-          trips: "3 Trips",
-          desc: "Mountain trekking routes",
-          tag: "Hiking"
+          title: t("rwenzoriTitle"),
+          trips: t("rwenzoriTrips"),
+          desc: t("rwenzoriDesc"),
+          tag: t("hiking")
         },
         {
           img: tanzania,
-          title: "Tanzania Safaris",
-          trips: "6 Trips",
-          desc: "Serengeti & Great Migration",
-          tag: "Premium"
+          title: t("tanzaniaTitle"),
+          trips: t("tanzaniaTrips"),
+          desc: t("tanzaniaDesc"),
+          tag: t("premium")
         }
       ].map((item, i) => (
         <div
@@ -393,20 +366,16 @@ Kenya and Tanzania combined safari packages.
               className="w-full h-full object-cover group-hover:scale-110 transition duration-[1200ms]"
             />
 
-            {/* DARK LAYER */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
 
-            {/* GOLD LIGHT ON HOVER */}
             <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition bg-[radial-gradient(circle_at_top,rgba(212,175,55,0.18),transparent_60%)]"></div>
 
-            {/* TAG */}
             <div className="absolute top-5 left-5">
               <span className="bg-yellow-400 text-black text-xs font-bold px-3 py-1 rounded-full">
                 {item.tag}
               </span>
             </div>
 
-            {/* CONTENT */}
             <div className="absolute bottom-0 p-6 md:p-8 w-full">
 
               <span className="text-xs text-white/70 border border-white/20 px-3 py-1 rounded-full backdrop-blur">
@@ -421,11 +390,10 @@ Kenya and Tanzania combined safari packages.
                 {item.desc}
               </p>
 
-              {/* ACTION ROW */}
               <div className="flex items-center justify-between mt-6">
 
                 <span className="text-xs text-white/50">
-                  Swipe for more
+                  {t("swipeMore")}
                 </span>
 
                 <div className="w-11 h-11 flex items-center justify-center rounded-full border border-white/20 text-yellow-300 group-hover:bg-yellow-400 group-hover:text-black transition">
@@ -437,7 +405,6 @@ Kenya and Tanzania combined safari packages.
             </div>
 
           </div>
-
         </div>
       ))}
 
@@ -636,7 +603,6 @@ Kenya and Tanzania combined safari packages.
 {/* DESTINATIONS & EXPERIENCES */}
 <section className="py-28 bg-gradient-to-b from-[#F8F7F3] via-white to-[#F3F3EF] relative overflow-hidden">
 
-  {/* Decorative background shapes */}
   <div className="absolute -top-40 -right-40 w-[500px] h-[500px] bg-[#D4AF37]/15 blur-[120px] rounded-full" />
   <div className="absolute -bottom-40 -left-40 w-[500px] h-[500px] bg-green-900/10 blur-[120px] rounded-full" />
 
@@ -644,19 +610,22 @@ Kenya and Tanzania combined safari packages.
 
     {/* HEADER */}
     <div className="text-center mb-20">
+
       <span className="uppercase tracking-[0.4em] text-[#D4AF37] text-xs font-semibold">
-        Explore East Africa
+        {t("exploreEastAfrica") || "Explore East Africa"}
       </span>
 
       <h2 className="text-4xl md:text-5xl font-bold mt-5 leading-tight">
-        Destinations Crafted for{" "}
-        <span className="text-[#D4AF37]">Unforgettable Adventure</span>
+        {t("destinationsTitlePart1") || "Destinations Crafted for"}{" "}
+        <span className="text-[#D4AF37]">
+          {t("destinationsTitleHighlight") || "Unforgettable Adventure"}
+        </span>
       </h2>
 
       <p className="mt-6 max-w-3xl mx-auto text-gray-600 leading-8">
-        Discover handpicked safari destinations across Kenya and Tanzania,
-        each offering unique wildlife, landscapes, and cultural richness.
+        {t("destinationsDesc")}
       </p>
+
     </div>
 
     {/* GRID CARDS */}
@@ -665,47 +634,45 @@ Kenya and Tanzania combined safari packages.
       {[
         {
           img: tanzania,
-          title: "Maasai Mara",
+          title: t("maasaiMara") || "Maasai Mara",
           icon: "🦁",
           color: "from-yellow-400/20",
-          desc: "Home of the Big Five and the legendary Great Migration across endless savannah plains.",
+          desc: t("maasaiMaraDesc")
         },
         {
           img: amboseli,
-          title: "Amboseli National Park",
+          title: t("amboseli"),
           icon: "🐘",
           color: "from-emerald-400/20",
-          desc: "Iconic elephant herds roaming beneath Mount Kilimanjaro’s snow-capped peak.",
+          desc: t("amboseliDesc")
         },
         {
           img: nakuru,
-          title: "Lake Nakuru",
+          title: t("lakeNakuru"),
           icon: "🦩",
           color: "from-pink-400/20",
-          desc: "Flamingos, rhinos, and breathtaking Rift Valley scenery in one ecosystem.",
+          desc: t("nakuruDesc")
         },
         {
           img: west,
-          title: "Tsavo National Park",
+          title: t("tsavo"),
           icon: "🐆",
           color: "from-red-400/20",
-          desc: "One of Africa’s largest wilderness areas with raw landscapes and red elephants.",
+          desc: t("tsavoDesc")
         },
         {
           img: serengeti,
-          title: "Serengeti (Tanzania)",
+          title: t("serengeti"),
           icon: "🌍",
           color: "from-sky-400/20",
-          desc: "Endless plains, predator action, and the world’s greatest wildlife migration.",
-        },
-        
+          desc: t("serengetiDesc")
+        }
       ].map((place, index) => (
         <div
           key={index}
           className="group relative rounded-[30px] overflow-hidden shadow-lg hover:shadow-2xl transition duration-700 bg-white border border-gray-100 hover:-translate-y-2"
         >
 
-          {/* IMAGE */}
           <div className="relative h-[260px] overflow-hidden">
             <img
               src={place.img}
@@ -713,16 +680,13 @@ Kenya and Tanzania combined safari packages.
               className="w-full h-full object-cover group-hover:scale-110 transition duration-[1500ms]"
             />
 
-            {/* gradient overlay */}
             <div className={`absolute inset-0 bg-gradient-to-t ${place.color} via-black/20 to-black/50`} />
 
-            {/* icon badge */}
             <div className="absolute top-4 left-4 bg-white/90 text-black text-lg px-3 py-1 rounded-full shadow-md">
               {place.icon}
             </div>
           </div>
 
-          {/* CONTENT */}
           <div className="p-7">
             <h3 className="text-xl font-bold mb-3 group-hover:text-[#D4AF37] transition">
               {place.title}
@@ -733,44 +697,44 @@ Kenya and Tanzania combined safari packages.
             </p>
           </div>
 
-          {/* bottom glow effect */}
-          <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-700 bg-gradient-to-br from-[#D4AF37]/10 to-transparent pointer-events-none" />
         </div>
       ))}
     </div>
 
     {/* FOOTER STRIP */}
     <div className="mt-20 bg-gradient-to-r from-[#0F2418] via-[#102315] to-[#0B1A12] rounded-[40px] p-12 text-white shadow-2xl">
+
       <div className="grid md:grid-cols-3 gap-10 text-center">
 
         <div>
           <h3 className="text-[#D4AF37] text-3xl font-bold">
-            Tailored Safaris
+            {t("tailoredSafaris")}
           </h3>
           <p className="text-gray-300 mt-3">
-            Every itinerary is customized to your travel style and budget.
+            {t("tailoredSafarisDesc")}
           </p>
         </div>
 
         <div>
           <h3 className="text-[#D4AF37] text-3xl font-bold">
-            Kenya & Tanzania
+            {t("kenyaTanzania")}
           </h3>
           <p className="text-gray-300 mt-3">
-            Seamless cross-border safari experiences across East Africa.
+            {t("kenyaTanzaniaDesc")}
           </p>
         </div>
 
         <div>
           <h3 className="text-[#D4AF37] text-3xl font-bold">
-            Expert Guides
+            {t("expertGuides")}
           </h3>
           <p className="text-gray-300 mt-3">
-            Professional local guides with deep wildlife expertise.
+            {t("expertGuidesDesc")}
           </p>
         </div>
 
       </div>
+
     </div>
 
   </div>
@@ -787,15 +751,15 @@ Kenya and Tanzania combined safari packages.
 
     {/* HEADER */}
     <div className="text-center max-w-3xl mx-auto mb-16">
+
       <h2 className="text-4xl md:text-5xl font-bold">
-        Trek & Climb East Africa
+        {t("trekTitle") || "Trek & Climb East Africa"}
       </h2>
 
       <p className="mt-5 text-white/70 leading-8">
-        Discover iconic trekking and climbing adventures across East Africa.
-        From snow-capped peaks to volcanic craters and scenic highlands,
-        experience nature at its most powerful form.
+        {t("trekDesc")}
       </p>
+
     </div>
 
     {/* CARDS */}
@@ -807,20 +771,21 @@ Kenya and Tanzania combined safari packages.
         <div className="h-52 overflow-hidden">
           <img
             src={require("../assets/climbingkili.jpg")}
-            alt="Mount Kilimanjaro"
+            alt={t("kilimanjaro")}
             className="w-full h-full object-cover group-hover:scale-110 transition duration-1000"
           />
         </div>
 
         <div className="p-6">
           <h3 className="text-xl font-bold text-yellow-300">
-            Mount Kilimanjaro
+            {t("kilimanjaro")}
           </h3>
+
           <p className="text-sm text-white/70 mt-2 leading-6">
-            Africa’s highest peak offering world-famous multi-day trekking routes
-            through rainforests, glaciers, and alpine deserts.
+            {t("kilimanjaroDesc")}
           </p>
         </div>
+
       </div>
 
       {/* Mount Kenya */}
@@ -829,20 +794,21 @@ Kenya and Tanzania combined safari packages.
         <div className="h-52 overflow-hidden">
           <img
             src={require("../assets/climbingkenya.jpg")}
-            alt="Mount Kenya"
+            alt={t("mountKenya")}
             className="w-full h-full object-cover group-hover:scale-110 transition duration-1000"
           />
         </div>
 
         <div className="p-6">
           <h3 className="text-xl font-bold text-yellow-300">
-            Mount Kenya
+            {t("mountKenya")}
           </h3>
+
           <p className="text-sm text-white/70 mt-2 leading-6">
-            Kenya’s highest mountain featuring scenic routes, glaciers,
-            and challenging summit climbs for experienced hikers.
+            {t("mountKenyaDesc")}
           </p>
         </div>
+
       </div>
 
       {/* Mount Longonot */}
@@ -851,20 +817,21 @@ Kenya and Tanzania combined safari packages.
         <div className="h-52 overflow-hidden">
           <img
             src={require("../assets/climbinglongonot.jpg")}
-            alt="Mount Longonot"
+            alt={t("longonot")}
             className="w-full h-full object-cover group-hover:scale-110 transition duration-1000"
           />
         </div>
 
         <div className="p-6">
           <h3 className="text-xl font-bold text-yellow-300">
-            Mount Longonot
+            {t("longonot")}
           </h3>
+
           <p className="text-sm text-white/70 mt-2 leading-6">
-            A dramatic volcanic crater hike offering panoramic views of the Rift Valley
-            and a rewarding full-crater trek.
+            {t("longonotDesc")}
           </p>
         </div>
+
       </div>
 
       {/* Hell's Gate */}
@@ -873,147 +840,126 @@ Kenya and Tanzania combined safari packages.
         <div className="h-52 overflow-hidden">
           <img
             src={require("../assets/hellsgate.jpg")}
-            alt="Hell's Gate"
+            alt={t("hellsGate")}
             className="w-full h-full object-cover group-hover:scale-110 transition duration-1000"
           />
         </div>
 
         <div className="p-6">
           <h3 className="text-xl font-bold text-yellow-300">
-            Hell’s Gate
+            {t("hellsGate")}
           </h3>
+
           <p className="text-sm text-white/70 mt-2 leading-6">
-            A unique adventure park where you can hike, cycle, and explore cliffs,
-            gorges, and geothermal landscapes.
+            {t("hellsGateDesc")}
           </p>
         </div>
+
       </div>
 
     </div>
 
     {/* CTA */}
     <div className="text-center mt-16">
+
       <a
         href="/contact"
         className="inline-block bg-yellow-400 text-black px-8 py-4 rounded-full font-bold hover:bg-yellow-300 transition"
       >
-        Plan Your Trekking Adventure
+        {t("trekCta")}
       </a>
+
     </div>
 
   </div>
 </section>
 
-
 {/* WHY TRAVEL WITH US */}
 <section className="py-24 bg-[#102315] text-white relative overflow-hidden">
 
-  {/* Background glow */}
   <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-yellow-500/10 rounded-full blur-3xl"></div>
 
   <div className="relative max-w-7xl mx-auto px-6 md:px-10">
 
-    {/* Header */}
+    {/* HEADER */}
     <div className="text-center mb-16">
 
       <span className="uppercase tracking-[5px] text-[#D4AF37] font-semibold">
-        Why Choose Us
+        {t("whyChooseUs")}
       </span>
 
       <h2 className="text-4xl md:text-5xl font-bold mt-4">
-
-        More Than A Safari,
+        {t("whyTitlePart1")}{" "}
         <span className="text-[#D4AF37]">
-          {" "}An Experience
+          {t("whyTitleHighlight")}
         </span>
-
       </h2>
 
       <p className="max-w-3xl mx-auto mt-6 text-gray-300 leading-8">
-
-        We create unforgettable journeys with local expertise,
-        luxury comfort and personalized adventures designed around
-        your travel dreams.
-
+        {t("whyDescription")}
       </p>
 
     </div>
 
-    {/* Feature Cards */}
+    {/* FEATURE CARDS */}
     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
 
-      {/* Card */}
+      {/* Card 1 */}
       <div className="bg-white/5 backdrop-blur-xl p-8 rounded-[30px] border border-white/10 hover:-translate-y-2 transition duration-500">
 
-        <div className="text-5xl mb-5">
-          🦁
-        </div>
+        <div className="text-5xl mb-5">🦁</div>
 
         <h3 className="text-2xl font-bold mb-4">
-          Expert Guides
+          {t("expertGuidesTitle")}
         </h3>
 
         <p className="text-gray-300 leading-7">
-
-          Professional local guides with deep wildlife and safari knowledge.
-
+          {t("expertGuidesDesc")}
         </p>
 
       </div>
 
-      {/* Card */}
+      {/* Card 2 */}
       <div className="bg-white/5 backdrop-blur-xl p-8 rounded-[30px] border border-white/10 hover:-translate-y-2 transition duration-500">
 
-        <div className="text-5xl mb-5">
-          🚙
-        </div>
+        <div className="text-5xl mb-5">🚙</div>
 
         <h3 className="text-2xl font-bold mb-4">
-          Luxury Travel
+          {t("luxuryTravelTitle")}
         </h3>
 
         <p className="text-gray-300 leading-7">
-
-          Comfortable safari vehicles built for adventure and long journeys.
-
+          {t("luxuryTravelDesc")}
         </p>
 
       </div>
 
-      {/* Card */}
+      {/* Card 3 */}
       <div className="bg-white/5 backdrop-blur-xl p-8 rounded-[30px] border border-white/10 hover:-translate-y-2 transition duration-500">
 
-        <div className="text-5xl mb-5">
-          🌍
-        </div>
+        <div className="text-5xl mb-5">🌍</div>
 
         <h3 className="text-2xl font-bold mb-4">
-          Eco Tourism
+          {t("ecoTourismTitle")}
         </h3>
 
         <p className="text-gray-300 leading-7">
-
-          Supporting conservation and local communities across Kenya.
-
+          {t("ecoTourismDesc")}
         </p>
 
       </div>
 
-      {/* Card */}
+      {/* Card 4 */}
       <div className="bg-white/5 backdrop-blur-xl p-8 rounded-[30px] border border-white/10 hover:-translate-y-2 transition duration-500">
 
-        <div className="text-5xl mb-5">
-          ⭐
-        </div>
+        <div className="text-5xl mb-5">⭐</div>
 
         <h3 className="text-2xl font-bold mb-4">
-          Trusted Service
+          {t("trustedServiceTitle")}
         </h3>
 
         <p className="text-gray-300 leading-7">
-
-          Hundreds of travelers trust our safari experiences every year.
-
+          {t("trustedServiceDesc")}
         </p>
 
       </div>
@@ -1026,400 +972,250 @@ Kenya and Tanzania combined safari packages.
 
 <section className="py-24 bg-gradient-to-br from-green-50 via-white to-yellow-50 relative overflow-hidden">
 
-  {/* Decorative background */}
   <div className="absolute top-0 left-0 w-72 h-72 bg-green-200/30 rounded-full blur-3xl"></div>
   <div className="absolute bottom-0 right-0 w-96 h-96 bg-yellow-200/30 rounded-full blur-3xl"></div>
 
-
   <div className="max-w-7xl mx-auto px-6 relative z-10">
 
-
-    {/* Header */}
+    {/* HEADER */}
     <div className="text-center mb-16">
 
-
-      <span className="
-      inline-block
-      px-5
-      py-2
-      rounded-full
-      bg-green-100
-      text-green-700
-      font-semibold
-      text-sm
-      mb-5
-      ">
-        ⭐ Traveler Reviews
+      <span className="inline-block px-5 py-2 rounded-full bg-green-100 text-green-700 font-semibold text-sm mb-5">
+        {t("reviewsBadge")}
       </span>
 
-
-      <h2 className="
-      text-4xl 
-      md:text-6xl 
-      font-extrabold 
-      text-gray-900
-      ">
-        What Our Travelers Say
+      <h2 className="text-4xl md:text-6xl font-extrabold text-gray-900">
+        {t("reviewsTitle")}
       </h2>
 
-
-      <p className="
-      mt-5 
-      text-gray-600 
-      text-lg
-      max-w-2xl
-      mx-auto
-      ">
-        Real experiences from guests who explored Kenya with Renlen Tours and Safaris.
+      <p className="mt-5 text-gray-600 text-lg max-w-2xl mx-auto">
+        {t("reviewsSubtitle")}
       </p>
 
-
-
       <div className="mt-6">
-
-        <div className="
-        text-yellow-400 
-        text-4xl
-        tracking-widest
-        animate-pulse
-        ">
+        <div className="text-yellow-400 text-4xl tracking-widest animate-pulse">
           ★★★★★
         </div>
 
-
-        <p className="
-        mt-2
-        font-bold
-        text-gray-800
-        ">
-          4.7 Rating • 3 Google Reviews
+        <p className="mt-2 font-bold text-gray-800">
+          {t("reviewsRating")}
         </p>
-
-
       </div>
-
 
     </div>
 
-
-
-
-    {/* Reviews */}
-
+    {/* REVIEWS */}
     <div className="grid md:grid-cols-3 gap-8">
 
+      {[
+        {
+          name: "Mohamed Mamo",
+          role: "Google Reviewer",
+          reviewKey: "review1"
+        },
+        {
+          name: "Jeff Ndilai",
+          role: "Local Guide",
+          reviewKey: "review2"
+        },
+        {
+          name: "Emmanuel Kaiseyie",
+          role: "Google Reviewer",
+          reviewKey: "review3"
+        }
+      ].map((item, index) => (
 
-    {[
-      {
-        name:"Mohamed Mamo",
-        role:"Google Reviewer",
-        review:
-        "Renlen Tours is the best tour operator in Kenya which can book you safari on."
-      },
+        <div
+          key={index}
+          className="group bg-white/80 backdrop-blur-lg border border-gray-100 rounded-3xl p-8 shadow-xl hover:shadow-2xl hover:-translate-y-3 transition duration-500 relative"
+        >
 
-      {
-        name:"Jeff Ndilai",
-        role:"Local Guide",
-        review:
-        "Amazing experience and great service from Renlen Tours and Safaris."
-      },
-
-
-      {
-        name:"Emmanuel Kaiseyie",
-        role:"Google Reviewer",
-        review:
-        "Excellent safari experience. Highly recommended."
-      }
-
-    ].map((item,index)=>(
-
-
-      <div
-      key={index}
-      className="
-      group
-      bg-white/80
-      backdrop-blur-lg
-      border
-      border-gray-100
-      rounded-3xl
-      p-8
-      shadow-xl
-      hover:shadow-2xl
-      hover:-translate-y-3
-      transition
-      duration-500
-      relative
-      ">
-
-
-        {/* Quote */}
-
-        <div className="
-        absolute
-        top-5
-        right-6
-        text-5xl
-        text-green-100
-        font-bold
-        ">
-          "
-        </div>
-
-
-
-        <div className="
-        text-yellow-400
-        text-2xl
-        mb-5
-        ">
-          ★★★★★
-        </div>
-
-
-
-        <p className="
-        text-gray-700
-        leading-relaxed
-        italic
-        ">
-          "{item.review}"
-        </p>
-
-
-
-        <div className="
-        mt-8
-        flex
-        items-center
-        gap-4
-        ">
-
-
-          <div className="
-          w-12
-          h-12
-          rounded-full
-          bg-gradient-to-br
-          from-green-600
-          to-green-900
-          flex
-          items-center
-          justify-center
-          text-white
-          font-bold
-          ">
-            {item.name.charAt(0)}
+          <div className="absolute top-5 right-6 text-5xl text-green-100 font-bold">
+            "
           </div>
 
+          <div className="text-yellow-400 text-2xl mb-5">
+            ★★★★★
+          </div>
 
-
-          <div>
-
-          <h4 className="
-          font-bold
-          text-gray-900
-          ">
-            {item.name}
-          </h4>
-
-
-          <p className="
-          text-sm
-          text-gray-500
-          ">
-            {item.role}
+          <p className="text-gray-700 leading-relaxed italic">
+            {t(item.reviewKey)}
           </p>
 
+          <div className="mt-8 flex items-center gap-4">
+
+            <div className="w-12 h-12 rounded-full bg-gradient-to-br from-green-600 to-green-900 flex items-center justify-center text-white font-bold">
+              {item.name.charAt(0)}
+            </div>
+
+            <div>
+              <h4 className="font-bold text-gray-900">
+                {item.name}
+              </h4>
+              <p className="text-sm text-gray-500">
+                {item.role}
+              </p>
+            </div>
+
           </div>
-
-
 
         </div>
 
-
-
-      </div>
-
-
-    ))}
-
+      ))}
 
     </div>
 
+    {/* BUTTONS */}
+    <div className="flex justify-center gap-6 mt-16 flex-wrap">
 
-
-
-
-    {/* Buttons */}
-
-    <div className="
-    flex
-    justify-center
-    gap-6
-    mt-16
-    flex-wrap
-    ">
       <a
-      href="https://search.google.com/local/writereview?placeid=ChIJj5Qk8H7FLxgR_6uAYZFoTn4"
-      target="_blank"
-      className="
-      group
-      relative
-      overflow-hidden
-      bg-green-700
-      text-white
-      px-10
-      py-4
-      rounded-full
-      font-bold
-      shadow-lg
-      hover:scale-110
-      transition
-      duration-300
-      " rel="noreferrer"
+        href="https://search.google.com/local/writereview?placeid=ChIJj5Qk8H7FLxgR_6uAYZFoTn4"
+        target="_blank"
+        rel="noreferrer"
+        className="group relative overflow-hidden bg-green-700 text-white px-10 py-4 rounded-full font-bold shadow-lg hover:scale-110 transition duration-300"
       >
+        <span className="relative z-10">
+          {t("writeReview")}
+        </span>
 
-      <span className="relative z-10">
-      ⭐ Write a Google Review
-      </span>
-
-
-      <span className="
-      absolute
-      inset-0
-      bg-green-900
-      translate-x-[-100%]
-      group-hover:translate-x-0
-      transition
-      duration-500
-      ">
-      </span>
+        <span className="absolute inset-0 bg-green-900 translate-x-[-100%] group-hover:translate-x-0 transition duration-500"></span>
       </a>
+
       <a
-      href="https://search.google.com/local/reviews?placeid=ChIJj5Qk8H7FLxgR_6uAYZFoTn4"
-      target="_blank"
-      className="
-      border-2
-      border-green-700
-      text-green-700
-      px-10
-      py-4
-      rounded-full
-      font-bold
-      hover:bg-green-700
-      hover:text-white
-      hover:scale-110
-      transition
-      duration-300
-      " rel="noreferrer"
+        href="https://search.google.com/local/reviews?placeid=ChIJj5Qk8H7FLxgR_6uAYZFoTn4"
+        target="_blank"
+        rel="noreferrer"
+        className="border-2 border-green-700 text-green-700 px-10 py-4 rounded-full font-bold hover:bg-green-700 hover:text-white hover:scale-110 transition duration-300"
       >
-
-      View All Reviews
-
+        {t("viewAllReviews")}
       </a>
-    </div>  </div>
+
+    </div>
+
+  </div>
 </section>
 
 
 {/* FOOTER */}
 <footer className="relative overflow-hidden bg-black text-white py-16">
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
-  
-      {/* Brand */}
-      <div>
-        <h2 className="text-3xl font-bold text-yellow-500 mb-2">
-          Renlen Tours and safaris
-        </h2>
-  
-        <p className="text-xs text-gray-500 mb-1">
-          Website designed & developed by Dennis Musa
-        </p>
-  
-        <p className="text-gray-400 leading-8 mb-3">
-          Professional safari vehicle hire services in kajiado ,kenya. Safe, comfortable, and unforgettable safari experiences.
-        </p>
-  
-        <a
-          href="https://dennismusa.netlify.app/"
-          target="_blank"
-          rel="noreferrer"
-          className="text-yellow-500 hover:underline text-sm font-semibold"
-        >
-          View Developer Portfolio
-        </a>
-      </div>
-  
-      {/* Links */}
-      <div>
-        <h3 className="text-xl font-bold mb-5">Quick Links</h3>
-  
-        <ul className="space-y-4 text-gray-400">
-          <li>
-            <Link to="/" className="hover:text-yellow-500 transition">
-              Home
-            </Link>
-          </li>
-  
-          <li>
-            <Link to="/vehicles" className="hover:text-yellow-500 transition">
-              Fleet
-            </Link>
-          </li>
-  
-          <li>
-            <Link to="/gallery" className="hover:text-yellow-500 transition">
-              Gallery
-            </Link>
-          </li>
-  
-          <li>
-            <Link to="/contact" className="hover:text-yellow-500 transition">
-              Contact
-            </Link>
-          </li>
-        </ul>
-      </div>
-  
-      {/* Services */}
-      <div>
-        <h3 className="text-xl font-bold mb-5">Services</h3>
-  
-        <ul className="space-y-4 text-gray-400">
-          <li>Safari Vehicle Hire</li>
-          <li>Airport Transfers</li>
-          <li>Group Tours</li>
-          <li>Private Safari Trips</li>
-        </ul>
-      </div>
-  
-      {/* Contact */}
-      <div>
-        <h3 className="text-xl font-bold mb-5">Contact Info</h3>
-  
-        <ul className="space-y-4 text-gray-400">
-          <li>📍 Kajiado, Kenya</li>
-          <li>📞 +254717554177</li>
-          <li>✉ renlentours@gmail.com</li>
-        </ul>
-  
-        <a
-          href="https://wa.me/+254717554177"
-          target="_blank"
-          rel="noreferrer"
-          className="inline-block mt-6 bg-green-500 hover:bg-green-600 text-black font-bold px-6 py-3 rounded-lg transition"
-        >
-          WhatsApp Booking
-        </a>
-      </div>
+
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+
+    {/* BRAND */}
+    <div>
+
+      <h2 className="text-3xl font-bold text-yellow-500 mb-2">
+        {t("footerBrand")}
+      </h2>
+
+      <p className="text-xs text-gray-500 mb-1">
+        {t("footerDeveloper")}
+      </p>
+
+      <p className="text-gray-400 leading-8 mb-3">
+        {t("footerDescription")}
+      </p>
+
+      <a
+        href="https://dennismusa.netlify.app/"
+        target="_blank"
+        rel="noreferrer"
+        className="text-yellow-500 hover:underline text-sm font-semibold"
+      >
+        {t("footerPortfolio")}
+      </a>
+
     </div>
-  
-    {/* Bottom */}
-    <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500">
-      © 2026 Renlen Tours and safaris . All Rights Reserved.
+
+    {/* LINKS */}
+    <div>
+
+      <h3 className="text-xl font-bold mb-5">
+        {t("quickLinks")}
+      </h3>
+
+      <ul className="space-y-4 text-gray-400">
+
+        <li>
+          <Link to="/" className="hover:text-yellow-500 transition">
+            {t("home")}
+          </Link>
+        </li>
+
+        <li>
+          <Link to="/vehicles" className="hover:text-yellow-500 transition">
+            {t("fleet")}
+          </Link>
+        </li>
+
+        <li>
+          <Link to="/gallery" className="hover:text-yellow-500 transition">
+            {t("gallery")}
+          </Link>
+        </li>
+
+        <li>
+          <Link to="/contact" className="hover:text-yellow-500 transition">
+            {t("contact")}
+          </Link>
+        </li>
+
+      </ul>
+
     </div>
-  </footer>
+
+    {/* SERVICES */}
+    <div>
+
+      <h3 className="text-xl font-bold mb-5">
+        {t("services")}
+      </h3>
+
+      <ul className="space-y-4 text-gray-400">
+
+        <li>{t("service1")}</li>
+        <li>{t("service2")}</li>
+        <li>{t("service3")}</li>
+        <li>{t("service4")}</li>
+
+      </ul>
+
+    </div>
+
+    {/* CONTACT */}
+    <div>
+
+      <h3 className="text-xl font-bold mb-5">
+        {t("contactInfo")}
+      </h3>
+
+      <ul className="space-y-4 text-gray-400">
+
+        <li>{t("location")}</li>
+        <li>{t("phone")}</li>
+        <li>{t("email")}</li>
+
+      </ul>
+
+      <a
+        href="https://wa.me/+254717554177"
+        target="_blank"
+        rel="noreferrer"
+        className="inline-block mt-6 bg-green-500 hover:bg-green-600 text-black font-bold px-6 py-3 rounded-lg transition"
+      >
+        {t("whatsappBooking")}
+      </a>
+
+    </div>
+
+  </div>
+
+  {/* BOTTOM */}
+  <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500">
+    {t("footerBottom")}
+  </div>
+
+</footer>
     </div>
   );
 }
