@@ -125,23 +125,16 @@ setTimeout(() => setSuccess(false), 3000);
 <span className="text-xs tracking-[4px] uppercase text-emerald-300">
 Renlen Tours & Safaris
 </span>
-
 </div>
-
-
 <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black leading-[1.05]">
 {t("heroTitle")}
 </h1>
-
-
 <p className="mt-8 text-gray-300 text-lg leading-8 max-w-2xl">
 {t("heroDesc")}
 </p>
-
-
 <div className="mt-10 flex flex-wrap gap-5">
 
-<a href="https://wa.me/2547000000" className="bg-emerald-500 hover:bg-emerald-400 text-black px-8 py-4 rounded-xl font-bold transition hover:scale-105 shadow-xl">
+<a href="https://wa.me/+254717554177" className="bg-emerald-500 hover:bg-emerald-400 text-black px-8 py-4 rounded-xl font-bold transition hover:scale-105 shadow-xl">
 {t("bookNow")}
 </a>
 
@@ -154,32 +147,7 @@ Renlen Tours & Safaris
 
 
 
-<div className="grid grid-cols-2 md:grid-cols-4 gap-5 mt-16">
 
-
-{[
-["500+", "happyTravelers"],
-["25+", "safariPackages"],
-["10+", "destinations"],
-["24/7", "customerSupport"]
-].map((item,i)=>(
-
-<div key={i} className="backdrop-blur-xl bg-white/10 rounded-3xl p-5 border border-white/10">
-
-<h2 className="text-emerald-400 text-3xl font-bold">
-{item[0]}
-</h2>
-
-<p className="text-sm text-gray-300 mt-1">
-{t(item[1])}
-</p>
-
-</div>
-
-))}
-
-
-</div>
 
 </div>
 
@@ -1477,12 +1445,12 @@ Kenya and Tanzania combined safari packages.
   
         <ul className="space-y-4 text-gray-400">
           <li>📍 Kajiado, Kenya</li>
-          <li>📞 +254 717 554177</li>
+          <li>📞 +254717554177</li>
           <li>✉ renlentours@gmail.com</li>
         </ul>
   
         <a
-          href="https://wa.me/+254 717 554177"
+          href="https://wa.me/+254717554177"
           target="_blank"
           rel="noreferrer"
           className="inline-block mt-6 bg-green-500 hover:bg-green-600 text-black font-bold px-6 py-3 rounded-lg transition"
