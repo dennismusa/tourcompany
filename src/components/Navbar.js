@@ -1,20 +1,19 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React, { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Menu } from "@headlessui/react";
 import { useTranslation } from "react-i18next";
+import i18n from "i18next";
+
 import logo from "../assets/logo.jpg";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
-
   const [mobileDestOpen, setMobileDestOpen] = useState(false);
 
-  // eslint-disable-next-line no-unused-vars
-  const location = useLocation();
-  const { i18n } = useTranslation();
+  const { t } = useTranslation();
 
   const destinations = [
     { name: "Aberdare National Park", path: "/aberdare" },
@@ -31,10 +30,10 @@ function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
-      const docHeight =
+      const height =
         document.documentElement.scrollHeight - window.innerHeight;
 
-      setScrollProgress((scrollTop / docHeight) * 100);
+      setScrollProgress((scrollTop / height) * 100);
       setScrolled(scrollTop > 50);
     };
 
@@ -48,17 +47,17 @@ function Navbar() {
     localStorage.setItem("lang", lang);
   };
 
-  const linkStyle =
-    "text-white/90 hover:text-yellow-300 transition px-3 py-2 rounded-md bg-black/40";
-
   const closeMobile = () => {
     setMenuOpen(false);
     setMobileDestOpen(false);
   };
 
+  const linkStyle =
+    "text-white/90 hover:text-yellow-300 transition px-3 py-2 rounded-md bg-black/40";
+
   return (
     <>
-      {/* SCROLL PROGRESS */}
+      {/* PROGRESS BAR */}
       <div className="fixed top-0 left-0 w-full h-[3px] z-[9999]">
         <div
           className="h-full bg-yellow-400 transition-all"
@@ -68,7 +67,7 @@ function Navbar() {
 
       {/* NAVBAR */}
       <nav
-        className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 border-b border-white/10 backdrop-blur-xl ${
+        className={`fixed top-0 left-0 w-full z-50 border-b border-white/10 backdrop-blur-xl transition-all duration-500 ${
           scrolled ? "bg-black/70 py-2" : "bg-black/90 py-4"
         }`}
       >
@@ -87,17 +86,16 @@ function Navbar() {
             <div className="hidden md:flex items-center gap-6">
 
               <Link className={linkStyle} to="/">
-                Home
+                {t("home")}
               </Link>
 
-              {/* DESTINATIONS DROPDOWN (HEADLESS UI) */}
+              {/* DROPDOWN */}
               <Menu as="div" className="relative">
-
                 <Menu.Button className={linkStyle}>
-                  Destinations ▾
+                  {t("destinations")} ▾
                 </Menu.Button>
 
-                <Menu.Items className="absolute top-full left-0 mt-3 w-72 bg-black border border-white/10 rounded-xl shadow-2xl overflow-hidden z-50 focus:outline-none">
+                <Menu.Items className="absolute top-full left-0 mt-3 w-72 bg-black border border-white/10 rounded-xl shadow-xl z-50 overflow-hidden">
 
                   <div className="px-4 py-3 text-yellow-300 font-bold border-b border-white/10">
                     Explore Parks
@@ -119,45 +117,41 @@ function Navbar() {
                       )}
                     </Menu.Item>
                   ))}
-
                 </Menu.Items>
-
               </Menu>
 
               <Link className={linkStyle} to="/gallery">
-                Gallery
+                {t("gallery")}
               </Link>
 
               <Link className={linkStyle} to="/vehicles">
-                Vehicles
+                {t("vehicles")}
               </Link>
 
               <Link className={linkStyle} to="/contact">
-                Contact
+                {t("contact")}
               </Link>
 
-              {/* LANGUAGE */}
+              {/* LANGUAGE SWITCH */}
               <select
                 onChange={changeLanguage}
                 value={i18n.language}
                 className="bg-black text-white border border-white/20 px-3 py-2 rounded-lg"
               >
                 <option value="en">English</option>
-                <option value="sw">Kiswahili</option>
+               
                 <option value="fr">French</option>
                 <option value="de">German</option>
                 <option value="es">Spanish</option>
-                <option value="it">Italian</option>
-                <option value="pt">Portuguese</option>
-                <option value="ar">Arabic</option>
-                <option value="zh">Chinese</option>
+                
               </select>
 
+              {/* WHATSAPP */}
               <a
-                href="https://wa.me/254724605140"
+                href="https://wa.me/254717554177"
                 className="bg-yellow-400 text-black px-5 py-2 rounded-full font-semibold"
               >
-                Book Safari
+                {t("bookNow")}
               </a>
 
             </div>
@@ -179,7 +173,7 @@ function Navbar() {
             menuOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
-          <div className="p-6 border-b border-white/10 flex justify-between">
+          <div className="p-6 flex justify-between border-b border-white/10">
             <h2 className="text-white font-bold">Menu</h2>
             <button onClick={() => setMenuOpen(false)}>✕</button>
           </div>
@@ -187,7 +181,7 @@ function Navbar() {
           <div className="flex flex-col gap-4 p-6 text-white">
 
             <Link to="/" onClick={closeMobile}>
-              Home
+              {t("home")}
             </Link>
 
             {/* MOBILE DESTINATIONS */}
@@ -195,7 +189,7 @@ function Navbar() {
               onClick={() => setMobileDestOpen(!mobileDestOpen)}
               className="text-left bg-black border border-white/10 px-4 py-3 rounded-xl"
             >
-              Destinations ▾
+              {t("destinations")} ▾
             </button>
 
             {mobileDestOpen && (
@@ -214,15 +208,15 @@ function Navbar() {
             )}
 
             <Link to="/gallery" onClick={closeMobile}>
-              Gallery
+              {t("gallery")}
             </Link>
 
             <Link to="/vehicles" onClick={closeMobile}>
-              Vehicles
+              {t("vehicles")}
             </Link>
 
             <Link to="/contact" onClick={closeMobile}>
-              Contact
+              {t("contact")}
             </Link>
 
           </div>

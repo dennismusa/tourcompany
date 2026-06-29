@@ -1,10 +1,22 @@
 {
-  "home": "Inicio",
-  "destinations": "Destinos",
-  "gallery": "Galería",
-  "vehicles": "Vehículos",
-  "contact": "Contacto",
-  "book": "Reservar Safari",
-  "bookNow": "Reservar ahora",
-  "welcome": "Bienvenido a Amboseli Safari"
+  "home": "Home",
+  "destinations": "Destinations",
+  "gallery": "Gallery",
+  "vehicles": "Vehicles",
+  "contact": "Contact",
+  "bookNow": "Book Safari Now",
+
+  "heroTitle": "Explore Kenya With Luxury Safari Vehicles",
+  "heroDesc": "Reliable safari transport in Amboseli, Tsavo & Chyulu Hills with comfort, safety, and expert local guides.",
+
+  "aboutTitle": "About Renlen Tours Safari",
+  "aboutText": "We provide unforgettable Kenya safari experiences with professional guides and comfortable vehicles.",
+
+  "destinationTitle": "Explore Our Destinations",
+
+  "servicesTitle": "Our Safari Services",
+
+  "contactTitle": "Contact Us",
+
+  "footerText": "Experience the beauty of Kenya with us."
 }

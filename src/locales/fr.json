@@ -4,7 +4,17 @@
   "gallery": "Galerie",
   "vehicles": "Véhicules",
   "contact": "Contact",
-  "book": "Réserver Safari",
-  "bookNow": "Réserver maintenant",
-  "welcome": "Bienvenue à Amboseli Safari"
+  "bookNow": "Réserver Maintenant",
+
+  "heroTitle": "Explorez le Kenya avec des véhicules safari de luxe",
+  "heroDesc": "Transport safari fiable avec confort et guides experts.",
+
+  "aboutTitle": "À propos de Renlen Tours Safari",
+  "aboutText": "Nous offrons des expériences safari inoubliables au Kenya.",
+
+  "destinationTitle": "Découvrez nos destinations",
+
+  "contactTitle": "Contactez-nous",
+
+  "footerText": "Découvrez la beauté du Kenya avec nous."
 }

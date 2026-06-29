@@ -101,147 +101,90 @@ setTimeout(() => setSuccess(false), 3000);
   return (
     <div className="bg-white text-gray-800 overflow-x-hidden">
       
-<section
-  id="home"
-  className="relative min-h-[80vh] max-h-[850px] flex items-center overflow-hidden"
->
+<section id="home" className="relative min-h-[80vh] max-h-[850px] flex items-center overflow-hidden">
 
-{/* BACKGROUND SLIDER */}
 <div className="absolute inset-0">
-
-{images.map((img,i)=>(
-
-<div
-key={i}
-className="absolute inset-0 transition-all duration-[2500ms]"
-style={{
-backgroundImage:`url(${img})`,
-backgroundSize:"cover",
-backgroundPosition:"center center",
-opacity:i===index?1:0,
-transform:i===index?"scale(1)":"scale(1.08)"
-}}
-/>
-
-))}
+{images.map((img,i)=>
+<div key={i} className="absolute inset-0 transition-all duration-[2500ms]" style={{backgroundImage:`url(${img})`,backgroundSize:"cover",backgroundPosition:"center",opacity:i===index?1:0,transform:i===index?"scale(1)":"scale(1.08)"}}/>
+)}
 </div>
-{/* OVERLAYS */}
 
 <div className="absolute inset-0 bg-black/55"/>
-
 <div className="absolute inset-0 bg-gradient-to-r from-[#05120D]/95 via-black/60 to-transparent"/>
+<div className="absolute inset-0 bg-[linear-gradient(to_top,rgba(0,0,0,.9),transparent)]"/>
 
-<div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(16,185,129,0.25),transparent_55%)]"/>
 
-<div className="absolute inset-0 bg-[linear-gradient(to_top,rgba(0,0,0,0.9),transparent)]"/>
-
-{/* CONTENT */}
 <div className="relative z-20 max-w-7xl mx-auto px-6 lg:px-10 w-full">
 
 <div className="max-w-4xl text-white">
-
-{/* TOP LABEL */}
 
 <div className="inline-flex items-center gap-3 px-5 py-2 rounded-full border border-emerald-400/20 bg-emerald-500/10 mb-8">
 
 <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"/>
 
 <span className="text-xs tracking-[4px] uppercase text-emerald-300">
-
 Renlen Tours & Safaris
+</span>
 
-</span></div>
-{/* HEADING */}
+</div>
+
 
 <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black leading-[1.05]">
-
-Explore Africa's
-
-<span className="block text-emerald-400">
-
-Untamed Beauty
-</span>
+{t("heroTitle")}
 </h1>
-{/* DESCRIPTION */}
+
 
 <p className="mt-8 text-gray-300 text-lg leading-8 max-w-2xl">
-
-Discover unforgettable safari adventures across Maasai Mara,
-Amboseli, Tsavo, Serengeti and Zanzibar with experienced guides,
-luxury vehicles and breathtaking wildlife encounters.
+{t("heroDesc")}
 </p>
 
-{/* BUTTONS */}
 
 <div className="mt-10 flex flex-wrap gap-5">
 
-<a
-href="https://wa.me/2547000000"
-className="bg-emerald-500 hover:bg-emerald-400 text-black px-8 py-4 rounded-xl font-bold transition hover:scale-105 shadow-xl"
->
-Book Safari</a>
-<Link
-to="/gallery"
-className="px-8 py-4 rounded-xl backdrop-blur-xl bg-white/10 border border-white/10 hover:bg-white hover:text-black transition"
->
-Explore Tours
+<a href="https://wa.me/2547000000" className="bg-emerald-500 hover:bg-emerald-400 text-black px-8 py-4 rounded-xl font-bold transition hover:scale-105 shadow-xl">
+{t("bookNow")}
+</a>
 
+
+<Link to="/gallery" className="px-8 py-4 rounded-xl backdrop-blur-xl bg-white/10 border border-white/10 hover:bg-white hover:text-black transition">
+{t("exploreTours")}
 </Link>
+
 </div>
-{/* STATS */}
+
+
 
 <div className="grid grid-cols-2 md:grid-cols-4 gap-5 mt-16">
 
-<div className="backdrop-blur-xl bg-white/10 rounded-3xl p-5 border border-white/10">
+
+{[
+["500+", "happyTravelers"],
+["25+", "safariPackages"],
+["10+", "destinations"],
+["24/7", "customerSupport"]
+].map((item,i)=>(
+
+<div key={i} className="backdrop-blur-xl bg-white/10 rounded-3xl p-5 border border-white/10">
 
 <h2 className="text-emerald-400 text-3xl font-bold">
-
-500+
-
-</h2>
-<p className="text-sm text-gray-300 mt-1">
-
-Happy Travelers
-</p></div>
-<div className="backdrop-blur-xl bg-white/10 rounded-3xl p-5 border border-white/10">
-
-<h2 className="text-emerald-400 text-3xl font-bold">
-
-25+
-
+{item[0]}
 </h2>
 
 <p className="text-sm text-gray-300 mt-1">
-
-Safari Packages
-</p></div>
-<div className="backdrop-blur-xl bg-white/10 rounded-3xl p-5 border border-white/10">
-
-<h2 className="text-emerald-400 text-3xl font-bold">
-
-10+
-
-</h2>
-
-<p className="text-sm text-gray-300 mt-1">
-
-Destinations
+{t(item[1])}
 </p>
+
 </div>
-<div className="backdrop-blur-xl bg-white/10 rounded-3xl p-5 border border-white/10">
 
-<h2 className="text-emerald-400 text-3xl font-bold">
+))}
 
-24/7
 
-</h2>
+</div>
 
-<p className="text-sm text-gray-300 mt-1">
+</div>
 
-Customer Support
+</div>
 
-</p></div></div></div></div>
-{/* TRUST BAR */}
 
 <div className="absolute bottom-0 left-0 right-0 z-30 backdrop-blur-xl bg-black/40 border-t border-white/10">
 
@@ -249,29 +192,30 @@ Customer Support
 
 <div className="grid grid-cols-2 md:grid-cols-4 gap-5 text-center">
 
-<div>
-<p className="text-emerald-400 font-semibold">
+{[
+"🦁 bigFive",
+"🚙 luxuryVans",
+"🌍 kenyaTanzania",
+"⭐ trustedGuides"
+].map((item,i)=>{
 
-🦁 Big Five Tours
+const [icon,text]=item.split(" ");
 
-</p></div><div>
-<p className="text-emerald-400 font-semibold">
+return(
+<p key={i} className="text-emerald-400 font-semibold">
+{icon} {t(text)}
+</p>
+)
 
-🚙 Luxury Safari Vans
+})}
 
-</p></div><div>
-<p className="text-emerald-400 font-semibold">
+</div>
 
-🌍 Kenya & Tanzania
+</div>
 
-</p></div><div>
-<p className="text-emerald-400 font-semibold">
+</div>
 
-⭐ Trusted Guides
 
-</p></div></div></div></div>
-
-{/* SLIDER DOTS */}
 
 <div className="absolute right-8 top-1/2 -translate-y-1/2 hidden lg:flex flex-col gap-3 z-30">
 
@@ -280,14 +224,14 @@ Customer Support
 <button
 key={i}
 onClick={()=>setIndex(i)}
-className={`transition-all rounded-full ${
-i===index
-?"h-10 w-3 bg-emerald-400"
-:"w-3 h-3 bg-white/40"
-}`}
+className={`transition-all rounded-full ${i===index?"h-10 w-3 bg-emerald-400":"w-3 h-3 bg-white/40"}`}
 />
 
-))}</div>
+))}
+
+</div>
+
+
 </section>
 
 
@@ -371,7 +315,7 @@ experiences across Kenya and East Africa with premium
 vehicles, expert guides and carefully designed safari
 packages.
 
-Explore Maasai Mara, Amboseli, Tsavo, Serengeti and
+Explore Maasai Mara,  Tsavo, Serengeti and
 Zanzibar while enjoying comfort, safety and authentic
 adventures.
 
