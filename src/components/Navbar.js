@@ -1,8 +1,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 
-import React,{useState,useEffect} from "react";
+import React,{useState,useEffect,useRef} from "react";
 import {Link} from "react-router-dom";
-import {Menu} from "@headlessui/react";
 import {useTranslation} from "react-i18next";
 import i18n from "i18next";
 
@@ -12,26 +11,37 @@ import logo from "../assets/logo.jpg";
 function Navbar(){
 
 const [menuOpen,setMenuOpen]=useState(false);
-const [mobileDestOpen,setMobileDestOpen]=useState(false);
+const [destOpen,setDestOpen]=useState(false);
+const [langOpen,setLangOpen]=useState(false);
+const [langHover,setLangHover]=useState(false);
 const [scrolled,setScrolled]=useState(false);
-const [scrollProgress,setScrollProgress]=useState(0);
+const [progress,setProgress]=useState(0);
+
+const langRef=useRef();
 
 const {t}=useTranslation();
 
 
 
-const destinations=[
-{ name:"Aberdare National Park",path:"/aberdare"},
-{ name:"Meru National Park",path:"/meru"},
-{ name:"Amboseli National Park",path:"/amboseli"},
-{ name:"Nairobi National Park",path:"/nairobipark"},
-{ name:"Mount Kenya",path:"/mountkenya"},
-{ name:"Hell’s Gate",path:"/hellsgate"},
-{ name:"Tsavo East",path:"/tsavoeast"},
-{ name:"Tsavo West",path:"/tsavowest"},
-{ name:"Lake Nakuru",path:"/lakenakuru"}
+const languages=[
+{code:"en",name:"English",flag:"🇬🇧"},
+{code:"fr",name:"French",flag:"🇫🇷"},
+{code:"de",name:"German",flag:"🇩🇪"},
+{code:"es",name:"Spanish",flag:"🇪🇸"}
 ];
 
+
+const destinations=[
+["Aberdare National Park","/aberdare"],
+["Meru National Park","/meru"],
+["Amboseli National Park","/amboseli"],
+["Nairobi National Park","/nairobipark"],
+["Mount Kenya","/mountkenya"],
+["Hell’s Gate","/hellsgate"],
+["Tsavo East","/tsavoeast"],
+["Tsavo West","/tsavowest"],
+["Lake Nakuru","/lakenakuru"]
+];
 
 
 
@@ -39,20 +49,33 @@ useEffect(()=>{
 
 const scroll=()=>{
 
-const top=window.scrollY;
-
 const height=document.documentElement.scrollHeight-window.innerHeight;
 
-setScrollProgress((top/height)*100);
+setProgress((window.scrollY/height)*100);
 
-setScrolled(top>50);
+setScrolled(window.scrollY>40);
+
+};
+
+
+const outside=(e)=>{
+
+if(langRef.current && !langRef.current.contains(e.target))
+setLangOpen(false);
 
 };
 
 
 window.addEventListener("scroll",scroll);
+document.addEventListener("mousedown",outside);
 
-return()=>window.removeEventListener("scroll",scroll);
+
+return()=>{
+
+window.removeEventListener("scroll",scroll);
+document.removeEventListener("mousedown",outside);
+
+};
 
 },[]);
 
@@ -60,32 +83,22 @@ return()=>window.removeEventListener("scroll",scroll);
 
 
 
-const changeLanguage=(e)=>{
+const changeLanguage=(code)=>{
 
-const lang=e.target.value;
+i18n.changeLanguage(code);
 
-i18n.changeLanguage(lang);
+localStorage.setItem("lang",code);
 
-localStorage.setItem("lang",lang);
-
-};
-
-
-
-const closeMobile=()=>{
-
-setMenuOpen(false);
-
-setMobileDestOpen(false);
+setLangOpen(false);
 
 };
 
 
+const current=languages.find(x=>x.code===i18n.language)||languages[0];
 
 
-const navItem=
-"text-white px-3 py-2 rounded-xl bg-white/5 hover:text-yellow-400 hover:bg-white/10 transition";
 
+const closeMobile=()=>setMenuOpen(false);
 
 
 
@@ -94,142 +107,115 @@ return(
 
 <>
 
-
-{/* TOP PROGRESS */}
-
 <div className="fixed top-0 left-0 w-full h-[3px] z-[999]">
-
-<div className="h-full bg-yellow-400 transition-all" style={{width:`${scrollProgress}%`}}/>
-
+<div className="h-full bg-yellow-400 transition-all" style={{width:`${progress}%`}}/>
 </div>
 
 
 
 
-
-
-<nav className={`fixed top-0 left-0 w-full z-50 backdrop-blur-xl border-b border-white/10 transition duration-500 ${scrolled?"bg-black/90 py-2":"bg-black/70 py-4"}`}>
-
-
-
+<nav className={`fixed top-0 left-0 w-full z-50 backdrop-blur-xl border-b border-white/10 transition-all duration-500 ${scrolled?"bg-[#111]/95 py-2":"bg-[#111]/80 py-4"}`}>
 
 <div className="max-w-7xl mx-auto px-4 md:px-8">
 
 <div className="h-20 flex items-center justify-between">
 
 
-
-{/* LOGO */}
-
 <Link to="/" className="flex items-center gap-3">
-
 
 <img src={logo} className="w-11 h-11 rounded-full border border-yellow-400 object-cover"/>
 
-
 <div>
-
-<h2 className="text-yellow-300 font-bold">
-Renlen Tours
-</h2>
-
-<p className="text-yellow-400 text-xs">
-Safari Adventures
-</p>
-
+<h2 className="text-yellow-300 font-bold">Renlen Tours</h2>
+<p className="text-yellow-400 text-xs">Safari Adventures</p>
 </div>
-
 
 </Link>
 
 
 
 
-
-
-{/* DESKTOP MENU */}
 
 <div className="hidden md:flex items-center gap-4">
 
 
-<Link to="/" className={navItem}>
-{t("home")}
+<Link className="navBtn" to="/">{t("home")}</Link>
+
+
+<div className="relative" onMouseEnter={()=>setDestOpen(true)} onMouseLeave={()=>setDestOpen(false)}>
+
+<button className="navBtn">
+{t("destinations")} ▾
+</button>
+
+
+{destOpen &&
+
+<div className="dropMenu">
+
+<div className="titleDrop">
+Explore Parks
+</div>
+
+{destinations.map(([name,path])=>(
+
+<Link key={path} to={path} className="dropItem">
+{name}
 </Link>
 
+))}
+
+</div>
+
+}
 
 
-
-<Menu as="div" className="relative">
-
-
-<Menu.Button className={navItem}>
-{t("destinations")} ▾
-</Menu.Button>
-
-
-
-<Menu.Items className="absolute top-12 left-0 w-72 bg-black rounded-xl border border-white/10 shadow-xl overflow-hidden">
-
-
-<div className="px-4 py-3 text-yellow-400 font-bold border-b border-white/10">
-Explore Parks
 </div>
 
 
 
-{destinations.map(d=>(
 
-<Menu.Item key={d.path}>
+<Link className="navBtn" to="/gallery">{t("gallery")}</Link>
 
-<Link to={d.path} className="block px-4 py-3 text-gray-300 hover:text-yellow-400 hover:bg-white/5">
+<Link className="navBtn" to="/vehicles">{t("vehicles")}</Link>
 
-{d.name}
+<Link className="navBtn" to="/contact">{t("contact")}</Link>
 
-</Link>
 
-</Menu.Item>
+
+
+<div 
+ref={langRef}
+className="relative"
+onMouseEnter={()=>setLangHover(true)}
+onMouseLeave={()=>setLangHover(false)}
+>
+
+
+<button className="navBtn">
+
+{current.flag} {current.name}
+
+</button>
+
+
+
+<div className={`dropMenu right-0 w-40 ${langHover?"show":"hide"}`}>
+
+{languages.map(lang=>(
+
+<button key={lang.code} onClick={()=>changeLanguage(lang.code)} className="dropItem w-full text-left">
+
+{lang.flag} {lang.name}
+
+</button>
 
 ))}
 
-
-</Menu.Items>
-
-
-</Menu>
+</div>
 
 
-
-
-
-<Link to="/gallery" className={navItem}>
-{t("gallery")}
-</Link>
-
-
-<Link to="/vehicles" className={navItem}>
-{t("vehicles")}
-</Link>
-
-
-<Link to="/contact" className={navItem}>
-{t("contact")}
-</Link>
-
-
-
-
-
-<select value={i18n.language} onChange={changeLanguage} className="bg-black text-white border border-white/20 rounded-full px-3 py-2">
-
-<option value="en">🇬🇧 English</option>
-
-<option value="fr">🇫🇷 French</option>
-
-<option value="de">🇩🇪 German</option>
-
-<option value="es">🇪🇸 Spanish</option>
-
-</select>
+</div>
 
 
 
@@ -242,7 +228,6 @@ Explore Parks
 </a>
 
 
-
 </div>
 
 
@@ -251,23 +236,37 @@ Explore Parks
 
 
 
-{/* MOBILE */}
 
 <div className="md:hidden flex items-center gap-3">
 
 
-<select value={i18n.language} onChange={changeLanguage} className="bg-white/10 text-white border border-white/20 rounded-full px-2 py-2 text-xs">
+<div ref={langRef} className="relative">
 
-<option value="en">🇬🇧</option>
 
-<option value="fr">🇫🇷</option>
+<button onClick={()=>setLangOpen(!langOpen)} className="mobileLang">
 
-<option value="de">🇩🇪</option>
+{current.flag} {current.code.toUpperCase()}
 
-<option value="es">🇪🇸</option>
+</button>
 
-</select>
 
+
+<div className={`dropMenu right-0 w-36 ${langOpen?"show":"hide"}`}>
+
+{languages.map(lang=>(
+
+<button key={lang.code} onClick={()=>changeLanguage(lang.code)} className="dropItem w-full text-left">
+
+{lang.flag} {lang.name}
+
+</button>
+
+))}
+
+</div>
+
+
+</div>
 
 
 
@@ -282,7 +281,6 @@ Explore Parks
 </div>
 
 
-
 </div>
 
 </div>
@@ -293,56 +291,22 @@ Explore Parks
 
 
 
-
-
-{/* MOBILE OVERLAY */}
-
-{menuOpen && (
-
-<div onClick={closeMobile} className="fixed inset-0 bg-black/70 backdrop-blur-sm z-40 md:hidden"/>
-
-)}
-
-
-
-
-
-
-
-
-
-{/* MOBILE DRAWER */}
-
-<div className={`fixed top-0 right-0 h-full w-[88%] max-w-sm bg-[#121212] border-l border-white/10 z-50 transition duration-500 md:hidden ${menuOpen?"translate-x-0":"translate-x-full"}`}>
+<div className={`fixed top-0 right-0 h-full w-[88%] max-w-sm bg-[#111]/95 backdrop-blur-xl border-l border-white/10 z-50 transition duration-500 md:hidden ${menuOpen?"translate-x-0":"translate-x-full"}`}>
 
 
 <div className="p-5 flex justify-between items-center border-b border-white/10">
 
 
-
 <div className="flex items-center gap-3">
-
 
 <img src={logo} className="w-11 h-11 rounded-full border border-yellow-400"/>
 
-
 <div>
-
-<h2 className="text-white font-bold">
-Renlen Tours
-</h2>
-
-<p className="text-yellow-400 text-xs">
-Safari Adventures
-</p>
-
-
+<h2 className="text-white font-bold">Renlen Tours</h2>
+<p className="text-yellow-400 text-xs">Safari Adventures</p>
 </div>
 
 </div>
-
-
-
 
 
 <button onClick={closeMobile} className="text-white text-3xl">
@@ -357,43 +321,29 @@ Safari Adventures
 
 
 
-
-
-
-
 <div className="p-5 space-y-4">
 
 
-<Link to="/" onClick={closeMobile} className="block p-4 rounded-xl bg-white/5 text-white">
-
+<Link onClick={closeMobile} to="/" className="menuBtn">
 🏠 {t("home")}
-
 </Link>
 
 
-
-
-<button onClick={()=>setMobileDestOpen(!mobileDestOpen)} className="w-full flex justify-between p-4 rounded-xl bg-white/5 text-white">
-
-🌍 {t("destinations")}
-
-<span>⌄</span>
-
+<button onClick={()=>setDestOpen(!destOpen)} className="menuBtn w-full flex justify-between">
+🌍 {t("destinations")} <span>⌄</span>
 </button>
 
 
 
+{destOpen &&
 
+<div className="bg-white/5 rounded-xl p-3">
 
-{mobileDestOpen && (
+{destinations.map(([name,path])=>(
 
-<div className="bg-white/5 rounded-xl p-3 space-y-2">
+<Link key={path} onClick={closeMobile} to={path} className="block py-2 text-gray-300">
 
-{destinations.map(d=>(
-
-<Link key={d.path} to={d.path} onClick={closeMobile} className="block px-3 py-2 text-gray-300 hover:text-yellow-400">
-
-🦁 {d.name}
+🦁 {name}
 
 </Link>
 
@@ -401,43 +351,27 @@ Safari Adventures
 
 </div>
 
-)}
+}
 
 
 
-
-
-
-<Link to="/gallery" onClick={closeMobile} className="block p-4 rounded-xl bg-white/5 text-white">
-
+<Link onClick={closeMobile} to="/gallery" className="menuBtn">
 📸 {t("gallery")}
-
 </Link>
 
 
-
-
-<Link to="/vehicles" onClick={closeMobile} className="block p-4 rounded-xl bg-white/5 text-white">
-
+<Link onClick={closeMobile} to="/vehicles" className="menuBtn">
 🚙 {t("vehicles")}
-
 </Link>
 
 
-
-
-
-<Link to="/contact" onClick={closeMobile} className="block p-4 rounded-xl bg-white/5 text-white">
-
+<Link onClick={closeMobile} to="/contact" className="menuBtn">
 📞 {t("contact")}
-
 </Link>
 
 
 
-
-
-<a href="https://wa.me/254717554177" className="block text-center bg-yellow-400 text-black font-bold py-4 rounded-full">
+<a href="https://wa.me/254717554177" className="block text-center bg-yellow-400 text-black py-4 rounded-full font-bold">
 
 🚀 {t("bookNow")}
 
@@ -447,14 +381,112 @@ Safari Adventures
 </div>
 
 
-
 </div>
 
 
-
-
-
 </nav>
+
+
+
+<style>{`
+
+.navBtn{
+color:white;
+padding:10px 14px;
+border-radius:12px;
+background:rgba(255,255,255,.06);
+transition:.3s;
+}
+
+.navBtn:hover{
+color:#facc15;
+background:rgba(255,255,255,.12);
+}
+
+
+.mobileLang{
+background:rgba(255,255,255,.1);
+border:1px solid rgba(255,255,255,.2);
+color:white;
+padding:8px 12px;
+border-radius:999px;
+font-size:12px;
+}
+
+
+.dropMenu{
+position:absolute;
+top:48px;
+background:#111;
+border:1px solid rgba(255,255,255,.1);
+border-radius:14px;
+overflow:hidden;
+box-shadow:0 20px 40px #000;
+animation:drop .25s ease;
+}
+
+
+.dropItem{
+display:block;
+padding:12px 16px;
+color:#ddd;
+transition:.3s;
+}
+
+.dropItem:hover{
+background:white;
+color:#111;
+}
+
+
+.titleDrop{
+padding:14px;
+color:#facc15;
+font-weight:bold;
+border-bottom:1px solid #333;
+}
+
+
+.hide{
+opacity:0;
+transform:translateY(-10px) scale(.95);
+pointer-events:none;
+}
+
+
+.show{
+opacity:1;
+transform:translateY(0) scale(1);
+}
+
+
+@keyframes drop{
+
+from{
+opacity:0;
+transform:translateY(-10px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+
+
+.menuBtn{
+
+display:block;
+padding:15px;
+border-radius:14px;
+background:rgba(255,255,255,.06);
+color:white;
+
+}
+
+`}</style>
 
 
 </>
