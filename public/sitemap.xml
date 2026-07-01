@@ -2,22 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
-    <loc>https://amboselilinksafari.com/</loc>
+    <loc>https://Renlentourssafari.com/</loc>
     <priority>1.0</priority>
   </url>
 
   <url>
-    <loc>https://amboselilinksafari.com/vehicles</loc>
+    <loc>https://Renlentourssafari.com/vehicles</loc>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://amboselilinksafari.com/gallery</loc>
+    <loc>https://Renlentourssafari.com/Destinations</loc>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://amboselilinksafari.com/contact</loc>
+    <loc>https://Renlentourssafari.com/gallery</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://Renlentourssafari.com/contact</loc>
     <priority>0.7</priority>
   </url>
 

@@ -80,12 +80,12 @@ function Contact() {
 
             <div className="space-y-3 text-gray-300">
               <p>📍 Kajiado, Kenya</p>
-              <p>📞  +254 717 554177</p>
+              <p>📞  +254717554177</p>
               <p>✉ info@renlentours.com</p>
             </div>
 
             <a
-              href="https://wa.me/254 717 554177"
+              href="https://wa.me/+254717554177"
               className="inline-block mt-10 bg-green-500 hover:bg-green-400 text-black font-bold px-8 py-4 rounded-xl"
             >
               Chat on WhatsApp
@@ -238,14 +238,14 @@ function Contact() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
 
             <a
-              href="https://wa.me/254724605140"
+              href="https://wa.me/+254717554177"
               className="bg-yellow-500 hover:bg-yellow-400 text-black font-bold px-8 py-4 rounded-xl"
             >
               Get Free Quote
             </a>
 
             <a
-              href="https://wa.me/254724605140"
+              href="https://wa.me/+254717554177"
               className="bg-white/10 border border-white/20 hover:bg-white hover:text-black px-8 py-4 rounded-xl"
             >
               Speak to Expert
@@ -260,13 +260,7 @@ function Contact() {
       </section>
 
       {/* ================= FLOAT WHATSAPP ================= */}
-      <a
-        href="https://wa.me/254 717554177"
-        className="fixed bottom-6 right-6 bg-green-500 hover:bg-green-400 text-black font-bold px-5 py-3 rounded-full shadow-xl z-50"
-      >
-        WhatsApp
-      </a>
-
+      
       {/* ================= FOOTER ================= */}
 <footer className="relative overflow-hidden bg-black text-white py-16">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
@@ -344,12 +338,12 @@ function Contact() {
   
         <ul className="space-y-4 text-gray-400">
           <li>📍 Kajiado, Kenya</li>
-          <li>📞 254 717 554177</li>
+          <li>📞 +254717554177</li>
           <li>✉ renlentours@gmail.com</li>
         </ul>
   
         <a
-          href="https://wa.me/+254 717 554177"
+          href="https://wa.me/+254717554177"
           target="_blank"
           rel="noreferrer"
           className="inline-block mt-6 bg-green-500 hover:bg-green-600 text-black font-bold px-6 py-3 rounded-lg transition"

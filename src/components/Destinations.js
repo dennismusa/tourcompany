@@ -192,7 +192,7 @@ function Destinations() {
 
             {/* CTA BUTTON */}
             <a
-              href={`https://wa.me/254724605140?text=${encodeURIComponent(
+              href={`https://wa.me/+254717554177?text=${encodeURIComponent(
                 `Hello, I want to visit ${dest.name}. Please help me plan a safari trip.`
               )}`}
               target="_blank"
@@ -230,7 +230,7 @@ function Destinations() {
     </p>
 
     <a
-      href="https://wa.me/254724605140"
+      href="https://wa.me/+254717554177"
       target="_blank"
       rel="noreferrer"
       className="inline-block bg-yellow-500 hover:bg-yellow-400 text-black font-bold px-8 sm:px-10 py-4 rounded-xl shadow-lg transition"
@@ -318,12 +318,12 @@ function Destinations() {
   
         <ul className="space-y-4 text-gray-400">
           <li>📍 Kajiado, Kenya</li>
-          <li>📞 +254 717 554177</li>
+          <li>📞 +254717554177</li>
           <li>✉ renlentours@gmail.com</li>
         </ul>
   
         <a
-          href="https://wa.me/+254 717 554177"
+          href="https://wa.me/+254717554177"
           target="_blank"
           rel="noreferrer"
           className="inline-block mt-6 bg-green-500 hover:bg-green-600 text-black font-bold px-6 py-3 rounded-lg transition"

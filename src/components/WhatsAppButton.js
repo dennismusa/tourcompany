@@ -5,12 +5,11 @@ export default function WhatsAppButton() {
 return (
 
 <a
-href="https://wa.me/712547554177?text=Hello%20Renlen%20Tours%20and%20Safaris,%20I%20would%20like%20to%20book%20a%20tour."
+href="https://wa.me/+254717554177?text=Hello%20Renlen%20Tours%20and%20Safaris,%20I%20would%20like%20to%20book%20a%20tour."
 target="_blank"
 rel="noopener noreferrer"
 
-className="
-fixed
+className="fixed
 bottom-6
 right-6
 z-50

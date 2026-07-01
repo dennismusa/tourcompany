@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "home": "Home",
   "destinations": "Destinations",
   "gallery": "Gallery",
@@ -118,3 +119,128 @@
 
   "swipeMore": "Swipe for more"
 }
+=======
+  "home": "Inicio",
+  "destinations": "Destinos",
+  "gallery": "Galería",
+  "vehicles": "Vehículos",
+  "contact": "Contacto",
+  "book": "Reservar Safari",
+  "bookNow": "Reservar Safari Ahora",
+
+  "heroTitle": "Explora Kenia con Vehículos de Safari de Lujo",
+  "heroDesc": "Descubre Kenia y África Oriental con experiencias de safari de primera clase, vehículos cómodos y guías locales expertos. Disfruta de viajes seguros, confiables e inolvidables por los destinos de vida silvestre más emblemáticos de África.",
+
+  "aboutTitle": "Sobre Renlen Tours Safari",
+  "aboutText": "Ofrecemos experiencias de safari inolvidables en Kenia con guías profesionales y vehículos cómodos.",
+
+  "destinationTitle": "Explora Nuestros Destinos",
+  "servicesTitle": "Nuestros Servicios de Safari",
+  "contactTitle": "Contáctanos",
+  "footerText": "Experimenta la belleza de Kenia con nosotros.",
+
+  "amboseli": "Parque Nacional Amboseli",
+  "tsavoEast": "Parque Nacional Tsavo Este",
+  "tsavoWest": "Parque Nacional Tsavo Oeste",
+  "nairobiPark": "Parque Nacional de Nairobi",
+  "lakeNakuru": "Parque Nacional del Lago Nakuru",
+  "mountKenya": "Monte Kenia",
+
+  "readMore": "Leer más",
+  "bookTour": "Reservar tour",
+
+  "location": "Ubicación",
+  "phone": "Teléfono",
+  "email": "Correo electrónico",
+
+  "whyChoose": "Por qué elegirnos",
+  "comfort": "Vehículos de safari cómodos",
+  "guides": "Guías locales profesionales",
+  "experience": "Años de experiencia en safaris",
+  "safety": "Seguridad y confiabilidad",
+
+  "whyChooseUs": "Por qué elegirnos",
+  "whyTitlePart1": "Más que un safari,",
+  "whyTitleHighlight": "una experiencia",
+  "whyDescription": "Creamos viajes inolvidables con experiencia local, comodidad de lujo y aventuras personalizadas.",
+
+  "expertGuidesTitle": "Guías expertos",
+  "expertGuidesDesc": "Guías locales profesionales con amplio conocimiento de la vida silvestre.",
+
+  "luxuryTravelTitle": "Viajes de lujo",
+  "luxuryTravelDesc": "Vehículos de safari cómodos para aventuras largas y seguras.",
+
+  "ecoTourismTitle": "Ecoturismo",
+  "ecoTourismDesc": "Apoyamos la conservación y las comunidades locales en Kenia.",
+
+  "trustedServiceTitle": "Servicio confiable",
+  "trustedServiceDesc": "Miles de viajeros confían en nuestras experiencias cada año.",
+
+  "reviewsBadge": "Reseñas de viajeros",
+  "reviewsTitle": "Lo que dicen nuestros viajeros",
+  "reviewsSubtitle": "Experiencias reales de clientes que exploraron Kenia con Renlen Tours y Safaris.",
+  "reviewsRating": "4.7 Calificación • 3 Reseñas de Google",
+
+  "review1": "Renlen Tours es el mejor operador turístico en Kenia para safaris.",
+  "review2": "Experiencia increíble y excelente servicio de Renlen Tours y Safaris.",
+  "review3": "Excelente experiencia de safari. Altamente recomendado.",
+
+  "writeReview": "Escribir reseña en Google",
+  "viewAllReviews": "Ver todas las reseñas",
+
+  "footerBrand": "Renlen Tours y Safaris",
+  "footerDeveloper": "Sitio web diseñado y desarrollado por Dennis Musa",
+  "footerDescription": "Servicios profesionales de alquiler de vehículos de safari en Kajiado, Kenia. Seguro, cómodo e inolvidable.",
+  "footerPortfolio": "Ver portafolio del desarrollador",
+
+  "quickLinks": "Enlaces rápidos",
+  "services": "Servicios",
+  "contactInfo": "Información de contacto",
+
+  "service1": "Alquiler de vehículos de safari",
+  "service2": "Traslados al aeropuerto",
+  "service3": "Tours en grupo",
+  "service4": "Safaris privados",
+
+  "unveilingTitle": "Descubriendo África Oriental",
+  "exploreAfrica": "Explora las",
+  "iconicDestinations": "Destinaciones Icónicas",
+  "scrollDescription": "Desliza para descubrir experiencias de safari por Kenia, Tanzania, Uganda y más allá.",
+
+  "migrationTitle": "Migración de Ñus",
+  "migrationTrips": "6 Viajes",
+  "migrationDesc": "Serengeti y la Gran Migración",
+
+  "gorillaTitle": "Trekking de Gorilas en Uganda",
+  "gorillaTrips": "4 Viajes",
+  "gorillaDesc": "Encuentros en la selva tropical",
+
+  "kenyaTitle": "Safaris en Kenia",
+  "kenyaTrips": "23 Viajes",
+  "kenyaDesc": "Los Cinco Grandes del Masái Mara",
+
+  "serengetiTitle": "Experiencia Serengeti",
+  "serengetiTrips": "8 Viajes",
+  "serengetiDesc": "Llanuras infinitas de vida salvaje",
+
+  "rwenzoriTitle": "Senderos Rwenzori",
+  "rwenzoriTrips": "3 Viajes",
+  "rwenzoriDesc": "Rutas de montaña",
+
+  "tanzaniaTitle": "Safaris en Tanzania",
+  "tanzaniaTrips": "6 Viajes",
+  "tanzaniaDesc": "Serengeti y la Gran Migración",
+
+  "premium": "Premium",
+  "adventure": "Aventura",
+  "popular": "Popular",
+  "iconic": "Icónico",
+  "hiking": "Senderismo",
+
+  "swipeMore": "Desliza para ver más",
+
+
+  "whatsappBooking": "Reserva por WhatsApp",
+  "footerBottom": "© 2026 Renlen Tours y Safaris. Todos los derechos reservados."
+}
+>>>>>>> 9bc003f (deploy)

@@ -23,7 +23,7 @@ function FleetShowcase() {
       gallery: [image5, image5],
       seats: "7 Seats",
       type: "4x4 Safari Jeep",
-      price: "  ",
+      price: " 270 ",
       category: "4x4",
       rating: 4.9,
       transmission: "Automatic",
@@ -44,7 +44,7 @@ function FleetShowcase() {
       gallery: [image6, image7],
       seats: "9 Seats",
       type: "Tour Van",
-      price: " ",
+      price: "210 ",
       category: "group",
       rating: 4.7,
       transmission: "Manual",
@@ -66,7 +66,7 @@ function FleetShowcase() {
       gallery: [image8, image8],
       seats: "10 Seats",
       type: "Group Tour Vehicle",
-      price: "  ",
+      price: "270  ",
       category: "group",
       rating: 4.6,
       transmission: "Manual",
@@ -97,7 +97,7 @@ function FleetShowcase() {
   const getWhatsAppLink = (vehicle) => {
     const message = `Hello, I want to book the ${vehicle.name} (${vehicle.type}) for $${vehicle.price} per day. Please assist me.`;
 
-    return `https://wa.me/2547000000?text=${encodeURIComponent(
+    return `https://wa.me/+254717554177?text=${encodeURIComponent(
       message
     )}`;
   };
@@ -141,7 +141,7 @@ function FleetShowcase() {
           <div className="flex flex-wrap justify-center gap-4">
 
             <a
-              href="https://wa.me/2547000000"
+              href="https://wa.me/+254717554177"
               target="_blank"
               rel="noreferrer"
               className="bg-yellow-500 hover:bg-yellow-400 text-black px-8 py-4 rounded-2xl font-bold transition shadow-xl"
@@ -543,7 +543,7 @@ Compare Our Safari Vehicles
           </p>
 
           <a
-            href="https://wa.me/254724605140"
+            href="https://wa.me/+254717554177"
             target="_blank"
             rel="noreferrer"
             className="inline-block bg-yellow-500 hover:bg-yellow-400 text-black font-bold px-10 py-4 rounded-2xl transition shadow-lg"
@@ -767,12 +767,12 @@ Compare Our Safari Vehicles
   
         <ul className="space-y-4 text-gray-400">
           <li>📍 Kajiado, Kenya</li>
-          <li>📞 +254 717 554177</li>
+          <li>📞 +254717554177</li>
           <li>✉ renlentours@gmail.com</li>
         </ul>
   
         <a
-          href="https://wa.me/+254 717 554177"
+          href="https://wa.me/+254717554177"
           target="_blank"
           rel="noreferrer"
           className="inline-block mt-6 bg-green-500 hover:bg-green-600 text-black font-bold px-6 py-3 rounded-lg transition"
