@@ -12,6 +12,24 @@
 
   "aboutTitle": "About Renlen Tours Safari",
   "aboutText": "We create unforgettable safari experiences across Kenya and East Africa with professional guides, luxury vehicles, and carefully designed travel adventures.",
+   
+  "aboutLabel": "ABOUT RENLEN TOURS",
+
+  "aboutHeading1": "Journey Beyond",
+  "aboutHeading2": "Ordinary Travel",
+
+  "aboutDescription": "Renlen Tours and Safaris creates unforgettable wildlife experiences across Kenya and East Africa with premium vehicles, expert guides, and carefully designed safari packages.",
+
+  "aboutDescription2": "Explore Maasai Mara, Tsavo, Serengeti, and Zanzibar while enjoying comfort, safety, and authentic adventures.",
+
+  "luxuryVehicles": "Luxury Safari Vehicles",
+  "luxuryVehiclesDesc": "Modern Land Cruisers and safari vans.",
+
+  "professionalGuides": "Professional Guides",
+  "professionalGuidesDesc": "Local experts with wildlife experience.",
+
+  "eastAfricaAdventure": "East Africa Adventures",
+  "eastAfricaAdventureDesc": "Kenya and Tanzania combined safari packages.",
 
   "aboutSubtitle": "Journey beyond ordinary travel",
 
@@ -61,7 +79,7 @@
   "mountLongonotDesc": "Volcanic crater hike with Rift Valley views.",
 
   "hellsGate": "Hell’s Gate National Park",
-  "hellsGateDesc": "Hiking, cycling, and dramatic geothermal landscapes.",
+  
 
   "whyChoose": "Why Choose Us",
   "whyChooseTitle": "More Than A Safari",
@@ -72,6 +90,27 @@
   "guides": "Professional Local Guides",
   "experience": "Years of Safari Experience",
   "safety": "Safety and Reliability",
+
+   
+  "hellsGateDesc": "A unique adventure park where you can hike, cycle, and explore cliffs, gorges, and geothermal landscapes.",
+
+  "trekCta": "Plan Your Trekking Adventure",
+
+  "whyChooseUs": "Why Choose Us",
+  "whyTitlePart1": "More Than A Safari,",
+  "whyTitleHighlight": "An Experience",
+
+  "whyDescription": "We create unforgettable journeys with local expertise, luxury comfort, and personalized adventures designed around your travel dreams.",
+
+  "expertGuidesTitle": "Expert Guides",
+  "luxuryTravelTitle": "Luxury Travel",
+  "luxuryTravelDesc": "Comfortable safari vehicles built for adventure and long journeys.",
+
+  "ecoTourismTitle": "Eco Tourism",
+  "ecoTourismDesc": "Supporting conservation and local communities across Kenya.",
+
+  "trustedServiceTitle": "Trusted Service",
+  "trustedServiceDesc": "Hundreds of travelers trust our safari experiences every year.",
 
   "reviewsTitle": "Traveler Reviews",
   "reviewsSubtitle": "Real experiences from our guests",
@@ -100,7 +139,32 @@
 
   "serengetiTitle": "Serengeti Experience",
   "serengetiTrips": "8 Trips",
-  "serengetiDesc": "Endless wildlife plains",
+   
+
+   "exploreEastAfrica": "Explore East Africa",
+
+  "destinationsTitlePart1": "Destinations Crafted for",
+  "destinationsTitleHighlight": "Unforgettable Adventure",
+
+  "destinationsDesc": "Discover handpicked safari destinations across Kenya and Tanzania, each offering unique wildlife, breathtaking landscapes, and rich cultural experiences.",
+
+  
+  
+  "nakuruDesc": "Flamingos, rhinos, and breathtaking Rift Valley scenery in one ecosystem.",
+
+  "tsavo": "Tsavo National Park",
+  "tsavoDesc": "One of Africa’s largest wilderness areas with raw landscapes and famous red elephants.",
+
+  
+  "tailoredSafaris": "Tailored Safaris",
+  "tailoredSafarisDesc": "Every itinerary is customized to match your travel style, interests, and budget.",
+
+  "kenyaTanzania": "Kenya & Tanzania",
+  "kenyaTanzaniaDesc": "Seamless cross-border safari experiences across East Africa.",
+
+  "expertGuides": "Expert Guides",
+  "expertGuidesDesc": "Professional local guides with extensive wildlife and safari expertise.",
+
 
   "rwenzoriTitle": "Rwenzori Trails",
   "rwenzoriTrips": "3 Trips",
@@ -109,16 +173,41 @@
   "tanzaniaTitle": "Tanzania Safaris",
   "tanzaniaTrips": "6 Trips",
   "tanzaniaDesc": "Serengeti & Great Migration",
+   
+
+    
 
   "premium": "Premium",
   "adventure": "Adventure",
   "popular": "Popular",
   "iconic": "Iconic",
   "hiking": "Hiking",
+  
 
-  "swipeMore": "Swipe for more"
-<<<<<<< HEAD
+  "footerBrand": "Renlen Tours and Safaris",
+  "footerDeveloper": "Website designed & developed by Dennis Musa",
+  "footerDescription": "Professional safari vehicle hire services in Kajiado, Kenya. Safe, comfortable, and unforgettable safari experiences.",
+
+  "footerPortfolio": "View Developer Portfolio",
+
+  "quickLinks": "Quick Links",
+  "fleet": "Fleet",
+
+  "services": "Services",
+
+  "service1": "Safari Vehicle Hire",
+  "service2": "Airport Transfers",
+  "service3": "Group Tours",
+  "service4": "Private Safari Trips",
+
+  "contactInfo": "Contact Info",
+
+  "location": "📍 Kajiado, Kenya",
+  "phone": "📞 +254717554177",
+  "email": "✉ renlentours@gmail.com",
+
+  "whatsappBooking": "WhatsApp Booking",
+
+  "footerBottom": "© 2026 Renlen Tours and Safaris. All Rights Reserved."
+
 }
-=======
-}
->>>>>>> 9bc003f (deploy)

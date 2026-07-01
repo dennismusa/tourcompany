@@ -169,100 +169,147 @@ i===index
 {/* ABOUT / EXPERIENCE SECTION */}
 <section className="relative py-28 overflow-hidden bg-[#F6FAF8]">
 
-  <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-emerald-100 rounded-full blur-3xl opacity-40" />
-  <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-emerald-50 rounded-full blur-3xl" />
+  <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-emerald-100 rounded-full blur-3xl opacity-40"></div>
+
+  <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-emerald-50 rounded-full blur-3xl"></div>
 
   <div className="relative max-w-7xl mx-auto px-6 lg:px-10">
 
     <div className="grid lg:grid-cols-[1fr_1.1fr] gap-20 items-center">
 
-      {/* IMAGES */}
+      {/* IMAGE SIDE */}
       <div className="relative">
 
-        <div className="group overflow-hidden rounded-[40px] shadow-2xl">
+        <div className="group overflow-hidden rounded-[40px] shadow-2xl relative">
+
           <img
             src={aboutImages[aboutIndex]}
             alt={t("aboutTitle")}
             className="w-full h-[520px] object-cover transition-all duration-[2000ms] group-hover:scale-110"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent" />
+
+          <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent"></div>
+
         </div>
 
         <div className="hidden md:block absolute -bottom-10 -right-10 w-[230px] h-[280px] overflow-hidden rounded-[30px] border-[8px] border-white shadow-2xl">
+
           <img
             src={image22}
             alt={t("aboutTitle")}
-            className="w-full h-full object-cover transition duration-[2000ms] hover:scale-110"
+            className="w-full h-full object-cover hover:scale-110 transition duration-[2000ms]"
           />
+
         </div>
 
         <div className="absolute top-8 left-8 bg-white/95 backdrop-blur-xl px-6 py-5 rounded-3xl shadow-xl">
-          <h2 className="text-4xl font-black text-emerald-500">10+</h2>
+
+          <h2 className="text-4xl font-black text-emerald-500">
+            10+
+          </h2>
+
           <p className="text-gray-700 text-sm">
-            {t("experienceYears") || "Years Experience"}
+            {t("yearsExperience")}
           </p>
+
         </div>
 
       </div>
 
-      {/* CONTENT */}
+      {/* CONTENT SIDE */}
       <div>
 
         <span className="uppercase tracking-[5px] text-emerald-500 font-bold">
-          {t("aboutTitle")}
+
+          {t("aboutLabel")}
+
         </span>
 
         <h2 className="text-4xl md:text-6xl font-black leading-tight mt-6 text-gray-900">
-          {t("aboutHeadline")}
+
+          {t("aboutHeading1")}
+
+          <span className="block text-emerald-500">
+
+            {t("aboutHeading2")}
+
+          </span>
+
         </h2>
 
         <p className="mt-8 text-gray-600 leading-8 text-lg">
-          {t("aboutText")}
+
+          {t("aboutDescription")}
+
+          <br />
+          <br />
+
+          {t("aboutDescription2")}
+
         </p>
 
         {/* FEATURES */}
+
         <div className="space-y-6 mt-10">
 
           <div className="flex items-start gap-4">
+
             <div className="w-14 h-14 rounded-2xl bg-emerald-100 flex items-center justify-center text-2xl">
               🚙
             </div>
+
             <div>
+
               <h3 className="font-bold text-lg">
-                {t("featureLuxuryTitle") || "Luxury Safari Vehicles"}
+                {t("luxuryVehicles")}
               </h3>
+
               <p className="text-gray-600">
-                {t("featureLuxuryDesc") || "Modern Land Cruisers and safari vans."}
+                {t("luxuryVehiclesDesc")}
               </p>
+
             </div>
+
           </div>
 
           <div className="flex items-start gap-4">
+
             <div className="w-14 h-14 rounded-2xl bg-emerald-100 flex items-center justify-center text-2xl">
               🦁
             </div>
+
             <div>
+
               <h3 className="font-bold text-lg">
-                {t("featureGuidesTitle") || "Professional Guides"}
+                {t("professionalGuides")}
               </h3>
+
               <p className="text-gray-600">
-                {t("featureGuidesDesc") || "Local experts with wildlife experience."}
+                {t("professionalGuidesDesc")}
               </p>
+
             </div>
+
           </div>
 
           <div className="flex items-start gap-4">
+
             <div className="w-14 h-14 rounded-2xl bg-emerald-100 flex items-center justify-center text-2xl">
               🌍
             </div>
+
             <div>
+
               <h3 className="font-bold text-lg">
-                {t("featureAdventureTitle") || "East Africa Adventures"}
+                {t("eastAfricaAdventure")}
               </h3>
+
               <p className="text-gray-600">
-                {t("featureAdventureDesc") || "Kenya and Tanzania combined safari packages."}
+                {t("eastAfricaAdventureDesc")}
               </p>
+
             </div>
+
           </div>
 
         </div>
@@ -272,8 +319,8 @@ i===index
     </div>
 
   </div>
-</section>
 
+</section>
 
 
 {/* FEATURED DESTINATIONS */}
@@ -413,190 +460,7 @@ i===index
   </div>
 </section>
 
-{/* ================= REVIEWS SECTION ================= */}
-{/*<section className="py-24 md:py-32 px-4 sm:px-6 md:px-10 bg-gradient-to-b from-gray-50 to-white">
-  
-<div className="relative space-y-5 max-h-[650px] overflow-y-auto pr-2 scroll-smooth
-  scrollbar-thin scrollbar-thumb-yellow-400 scrollbar-track-gray-100
-  hover:scrollbar-thumb-yellow-500">
 
-  {/* TOP FADE (hides harsh cut-off) */}
-  {/*<div className="pointer-events-none absolute top-0 left-0 right-0 h-6 bg-gradient-to-b from-white to-transparent z-10" />
-
-  {/* BOTTOM FADE */}
-  {/*<div className="pointer-events-none absolute bottom-0 left-0 right-0 h-6 bg-gradient-to-t from-white to-transparent z-10" />
-
-
-    {/* HEADER */}
-   {/* <div className="text-center mb-14">
-      <p className="uppercase tracking-[6px] text-yellow-500 font-semibold mb-3">
-        Testimonials
-      </p>
-
-      <h2 className="text-4xl md:text-5xl font-bold mb-4">
-        What Our Tourists Say
-      </h2>
-
-      <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-        Real experiences from travelers who explored Kenya with our safari services.
-      </p>
-    </div>
-
-    {/* CONTENT GRID */}
-   {/* <div className="grid lg:grid-cols-2 gap-14 items-start">
-
-      {/* ================= FORM ================= */}
-     {/* <div className="bg-white rounded-3xl shadow-xl border border-gray-100 p-6 sm:p-8">
-
-        <h3 className="text-2xl font-bold mb-6 text-gray-800">
-          Leave a Review
-        </h3>
-
-        {/* SUCCESS MESSAGE */}
-      {/*  {success && (
-          <div className="mb-4 bg-green-50 text-green-700 px-4 py-3 rounded-xl text-sm">
-            Thank you! Your review has been submitted 🌍
-          </div>
-        )}
-
-        <form onSubmit={handleSubmit} className="space-y-5">
-
-        {/*  {/* NAME */}
-      {/*    <input
-            type="text"
-            placeholder="Your Name"
-            value={name}
-            maxLength={30}
-            onChange={(e) => setName(e.target.value)}
-            className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-yellow-400 transition"
-          />
-
-          {/* MESSAGE */}
-      {/*    <textarea
-            placeholder="Share your safari experience..."
-            value={message}
-            maxLength={300}
-            onChange={(e) => setMessage(e.target.value)}
-            className="w-full px-4 py-3 h-32 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-yellow-400 transition resize-none"
-          />
-
-          <div className="text-xs text-gray-400 text-right">
-            {message.length}/300
-          </div>
-
-          {/* STAR RATING (CLICKABLE) */}
-       {/*   <div>
-            <label className="text-sm text-gray-600 font-medium block mb-2">
-              Rating:
-            </label>
-
-            <div className="flex gap-1">
-              {[1, 2, 3, 4, 5].map((star) => (
-                <button
-                  type="button"
-                  key={star}
-                  onClick={() => setRating(star)}
-                  className="text-2xl transition"
-                >
-                  {star <= rating ? "⭐" : "☆"}
-                </button>
-              ))}
-            </div>
-          </div>
-
-          {/* SUBMIT BUTTON */}
-      {/*    <button
-            type="submit"
-            disabled={!name || !message || loading}
-            className={`w-full font-bold py-3 rounded-xl transition shadow-md ${
-              !name || !message || loading
-                ? "bg-gray-300 cursor-not-allowed"
-                : "bg-yellow-500 hover:bg-yellow-600 text-black"
-            }`}
-          >
-            {loading ? "Submitting..." : "Submit Review"}
-          </button>
-
-          <p className="text-xs text-gray-400 text-center">
-            Your review helps other travelers choose better safari experiences.
-          </p>
-
-        </form>
-      </div>
-
-      {/* ================= REVIEWS DISPLAY ================= */}
-     {/* <div>
-
-        <h3 className="text-2xl font-bold mb-6 text-gray-800">
-          Recent Reviews
-        </h3>
-
-        {/* LOADING STATE */}
-     {/*   {loadingReviews ? (
-          <div className="bg-white rounded-2xl p-10 text-center border">
-            <p className="text-gray-500">Loading reviews...</p>
-          </div>
-        ) : (
-          <div className="space-y-5 max-h-[600px] overflow-y-auto pr-2">
-
-            {reviews.length === 0 ? (
-              <div className="bg-white border border-dashed border-gray-300 rounded-2xl p-10 text-center">
-                <p className="text-gray-500 font-medium">
-                  No reviews yet
-                </p>
-                <p className="text-sm text-gray-400 mt-2">
-                  Be the first to share your experience 🌍
-                </p>
-              </div>
-            ) : (
-              reviews.map((r, index) => (
-                <div
-                  key={index}
-                  className="bg-white border border-gray-100 rounded-2xl p-5 shadow-sm hover:shadow-md transition"
-                >
-
-                  {/* HEADER */}
-        {/*          <div className="flex items-center justify-between mb-2">
-
-                    {/* AVATAR */}
-        {/*           <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-full bg-yellow-500 text-black flex items-center justify-center font-bold">
-                        {r.name?.charAt(0)?.toUpperCase()}
-                      </div>
-
-                      <div>
-                        <h4 className="font-semibold text-gray-800">
-                          {r.name}
-                        </h4>
-                        <p className="text-xs text-gray-400">
-                          {new Date(r.date || Date.now()).toLocaleDateString()}
-                        </p>
-                      </div>
-                    </div>
-
-                    {/* STARS */}
-        {/*            <span className="text-yellow-500 text-sm">
-                      {"⭐".repeat(r.rating)}
-                    </span>
-                  </div>
-
-                  {/* MESSAGE */}
-         {/*         <p className="text-gray-600 text-sm leading-7">
-                    {r.message}
-                  </p>
-
-                </div>
-              ))
-            )}
-
-          </div>
-        )}
-
-      </div>
-
-    </div>
-  </div>
-</section>
 
 
 
@@ -743,135 +607,57 @@ i===index
 
 <section className="relative py-28 bg-gradient-to-b from-black via-[#06130D] to-black text-white overflow-hidden">
 
-  {/* BACKGROUND GLOW */}
   <div className="absolute -top-40 -left-40 w-[500px] h-[500px] bg-emerald-500/10 blur-[120px] rounded-full"></div>
   <div className="absolute -bottom-40 -right-40 w-[500px] h-[500px] bg-yellow-500/10 blur-[120px] rounded-full"></div>
 
   <div className="relative max-w-7xl mx-auto px-6 md:px-10">
 
-    {/* HEADER */}
     <div className="text-center max-w-3xl mx-auto mb-16">
-
-      <h2 className="text-4xl md:text-5xl font-bold">
-        {t("trekTitle") || "Trek & Climb East Africa"}
-      </h2>
-
-      <p className="mt-5 text-white/70 leading-8">
-        {t("trekDesc")}
-      </p>
-
+      <h2 className="text-4xl md:text-5xl font-bold">{t("trekTitle") || "Trek & Climb East Africa"}</h2>
+      <p className="mt-5 text-white/70 leading-8">{t("trekDesc")}</p>
     </div>
 
-    {/* CARDS */}
     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
 
-      {/* Kilimanjaro */}
-      <div className="group rounded-3xl overflow-hidden bg-white/5 border border-white/10 hover:border-yellow-400/40 transition">
+      {[
+        {image:"climbingkili.jpg",title:"kilimanjaro",desc:"Experience Africa’s highest peak with breathtaking landscapes, glaciers, and unforgettable sunrise views above the clouds.",location:"Tanzania",height:"5,895m",duration:"5 - 9 Days",level:"Challenging",season:"June - October"},
+        {image:"climbingkenya.jpg",title:"mountKenya",desc:"Explore Kenya’s legendary mountain with dramatic valleys, alpine scenery, and stunning views from Point Lenana.",location:"Kenya",height:"5,199m",duration:"4 - 6 Days",level:"Moderate",season:"January - March"},
+        {image:"climbinglongonot.jpg",title:"longonot",desc:"A perfect day adventure hiking through volcanic terrain, crater trails, and panoramic views of the Great Rift Valley.",location:"Naivasha, Kenya",height:"2,776m",duration:"1 Day",level:"Easy - Moderate",season:"All Year"},
+        {image:"hellsgate.jpg",title:"hellsGate",desc:"Enjoy an active outdoor adventure with hiking, cycling, cliffs, wildlife, and spectacular volcanic landscapes.",location:"Nakuru, Kenya",height:"2,190m",duration:"1 Day",level:"Easy",season:"All Year"}
+      ].map((item,index)=>(
 
-        <div className="h-52 overflow-hidden">
-          <img
-            src={require("../assets/climbingkili.jpg")}
-            alt={t("kilimanjaro")}
-            className="w-full h-full object-cover group-hover:scale-110 transition duration-1000"
-          />
+        <div key={index} className="group rounded-3xl overflow-hidden bg-white/5 border border-white/10 hover:border-yellow-400/40 transition-all duration-500 hover:-translate-y-2">
+
+          <div className="h-56 overflow-hidden relative">
+            <img src={require(`../assets/${item.image}`)} alt={t(item.title)} className="w-full h-full object-cover group-hover:scale-110 transition duration-1000"/>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+            <h3 className="absolute bottom-4 left-5 text-2xl font-bold text-yellow-300">{t(item.title)}</h3>
+          </div>
+
+          <div className="p-6">
+
+            <p className="text-sm text-white/70 leading-7 mb-5">{item.desc}</p>
+
+            <div className="space-y-3 text-sm text-white/80">
+              <div className="flex justify-between"><span>📍 Location</span><span>{item.location}</span></div>
+              <div className="flex justify-between"><span>⛰ Height</span><span>{item.height}</span></div>
+              <div className="flex justify-between"><span>🕒 Duration</span><span>{item.duration}</span></div>
+              <div className="flex justify-between"><span>🥾 Difficulty</span><span>{item.level}</span></div>
+              <div className="flex justify-between"><span>☀ Best Time</span><span>{item.season}</span></div>
+            </div>
+
+           
+
+          </div>
+
         </div>
 
-        <div className="p-6">
-          <h3 className="text-xl font-bold text-yellow-300">
-            {t("kilimanjaro")}
-          </h3>
-
-          <p className="text-sm text-white/70 mt-2 leading-6">
-            {t("kilimanjaroDesc")}
-          </p>
-        </div>
-
-      </div>
-
-      {/* Mount Kenya */}
-      <div className="group rounded-3xl overflow-hidden bg-white/5 border border-white/10 hover:border-yellow-400/40 transition">
-
-        <div className="h-52 overflow-hidden">
-          <img
-            src={require("../assets/climbingkenya.jpg")}
-            alt={t("mountKenya")}
-            className="w-full h-full object-cover group-hover:scale-110 transition duration-1000"
-          />
-        </div>
-
-        <div className="p-6">
-          <h3 className="text-xl font-bold text-yellow-300">
-            {t("mountKenya")}
-          </h3>
-
-          <p className="text-sm text-white/70 mt-2 leading-6">
-            {t("mountKenyaDesc")}
-          </p>
-        </div>
-
-      </div>
-
-      {/* Mount Longonot */}
-      <div className="group rounded-3xl overflow-hidden bg-white/5 border border-white/10 hover:border-yellow-400/40 transition">
-
-        <div className="h-52 overflow-hidden">
-          <img
-            src={require("../assets/climbinglongonot.jpg")}
-            alt={t("longonot")}
-            className="w-full h-full object-cover group-hover:scale-110 transition duration-1000"
-          />
-        </div>
-
-        <div className="p-6">
-          <h3 className="text-xl font-bold text-yellow-300">
-            {t("longonot")}
-          </h3>
-
-          <p className="text-sm text-white/70 mt-2 leading-6">
-            {t("longonotDesc")}
-          </p>
-        </div>
-
-      </div>
-
-      {/* Hell's Gate */}
-      <div className="group rounded-3xl overflow-hidden bg-white/5 border border-white/10 hover:border-yellow-400/40 transition">
-
-        <div className="h-52 overflow-hidden">
-          <img
-            src={require("../assets/hellsgate.jpg")}
-            alt={t("hellsGate")}
-            className="w-full h-full object-cover group-hover:scale-110 transition duration-1000"
-          />
-        </div>
-
-        <div className="p-6">
-          <h3 className="text-xl font-bold text-yellow-300">
-            {t("hellsGate")}
-          </h3>
-
-          <p className="text-sm text-white/70 mt-2 leading-6">
-            {t("hellsGateDesc")}
-          </p>
-        </div>
-
-      </div>
-
-    </div>
-
-    {/* CTA */}
-    <div className="text-center mt-16">
-
-      <a
-        href="/contact"
-        className="inline-block bg-yellow-400 text-black px-8 py-4 rounded-full font-bold hover:bg-yellow-300 transition"
-      >
-        {t("trekCta")}
-      </a>
+      ))}
 
     </div>
 
   </div>
+
 </section>
 
 {/* WHY TRAVEL WITH US */}
@@ -970,7 +756,7 @@ i===index
 
 </section>
 
-<section className="py-24 bg-gradient-to-br from-green-50 via-white to-yellow-50 relative overflow-hidden">
+<section className="relative py-24 bg-gradient-to-br from-green-50 via-white to-yellow-50 overflow-hidden">
 
   <div className="absolute top-0 left-0 w-72 h-72 bg-green-200/30 rounded-full blur-3xl"></div>
   <div className="absolute bottom-0 right-0 w-96 h-96 bg-yellow-200/30 rounded-full blur-3xl"></div>
@@ -981,24 +767,23 @@ i===index
     <div className="text-center mb-16">
 
       <span className="inline-block px-5 py-2 rounded-full bg-green-100 text-green-700 font-semibold text-sm mb-5">
-        {t("reviewsBadge")}
+        Reviews
       </span>
 
       <h2 className="text-4xl md:text-6xl font-extrabold text-gray-900">
-        {t("reviewsTitle")}
+        What Our Clients Say
       </h2>
 
       <p className="mt-5 text-gray-600 text-lg max-w-2xl mx-auto">
-        {t("reviewsSubtitle")}
+        Real feedback from travelers who experienced our safaris and tours.
       </p>
 
       <div className="mt-6">
-        <div className="text-yellow-400 text-4xl tracking-widest animate-pulse">
+        <div className="text-yellow-400 text-4xl tracking-widest">
           ★★★★★
         </div>
-
         <p className="mt-2 font-bold text-gray-800">
-          {t("reviewsRating")}
+          4.8 Average Rating
         </p>
       </div>
 
@@ -1007,87 +792,69 @@ i===index
     {/* REVIEWS */}
     <div className="grid md:grid-cols-3 gap-8">
 
-      {[
-        {
-          name: "Mohamed Mamo",
-          role: "Google Reviewer",
-          reviewKey: "review1"
-        },
-        {
-          name: "Jeff Ndilai",
-          role: "Local Guide",
-          reviewKey: "review2"
-        },
-        {
-          name: "Emmanuel Kaiseyie",
-          role: "Google Reviewer",
-          reviewKey: "review3"
-        }
-      ].map((item, index) => (
-
-        <div
-          key={index}
-          className="group bg-white/80 backdrop-blur-lg border border-gray-100 rounded-3xl p-8 shadow-xl hover:shadow-2xl hover:-translate-y-3 transition duration-500 relative"
-        >
-
-          <div className="absolute top-5 right-6 text-5xl text-green-100 font-bold">
-            "
+      <div className="bg-white/80 backdrop-blur-lg border border-gray-100 rounded-3xl p-8 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition">
+        <div className="text-yellow-400 text-2xl mb-5">★★★★★</div>
+        <p className="text-gray-700 italic leading-relaxed">
+          Renlen tour's it's the best tour operator now in Kenya which can book you safari on time and deliver excellent service.
+        </p>
+        <div className="mt-8 flex items-center gap-4">
+          <div className="w-12 h-12 rounded-full bg-green-700 flex items-center justify-center text-white font-bold">M</div>
+          <div>
+            <h4 className="font-bold text-gray-900">Mohamed Mamo</h4>
+            <p className="text-sm text-gray-500">Google Reviewer</p>
           </div>
-
-          <div className="text-yellow-400 text-2xl mb-5">
-            ★★★★★
-          </div>
-
-          <p className="text-gray-700 leading-relaxed italic">
-            {t(item.reviewKey)}
-          </p>
-
-          <div className="mt-8 flex items-center gap-4">
-
-            <div className="w-12 h-12 rounded-full bg-gradient-to-br from-green-600 to-green-900 flex items-center justify-center text-white font-bold">
-              {item.name.charAt(0)}
-            </div>
-
-            <div>
-              <h4 className="font-bold text-gray-900">
-                {item.name}
-              </h4>
-              <p className="text-sm text-gray-500">
-                {item.role}
-              </p>
-            </div>
-
-          </div>
-
         </div>
+      </div>
 
-      ))}
+      <div className="bg-white/80 backdrop-blur-lg border border-gray-100 rounded-3xl p-8 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition">
+        <div className="text-yellow-400 text-2xl mb-5">★★★★★</div>
+        <p className="text-gray-700 italic leading-relaxed">
+          Excellent👌. You better try their services, very professional and reliable tour operator.
+        </p>
+        <div className="mt-8 flex items-center gap-4">
+          <div className="w-12 h-12 rounded-full bg-green-700 flex items-center justify-center text-white font-bold">S</div>
+          <div>
+            <h4 className="font-bold text-gray-900">Steve Ndilai</h4>
+            <p className="text-sm text-gray-500">Client</p>
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-white/80 backdrop-blur-lg border border-gray-100 rounded-3xl p-8 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition">
+        <div className="text-yellow-400 text-2xl mb-5">★★★★★</div>
+        <p className="text-gray-700 italic leading-relaxed">
+          Good service and reliable communication. Highly recommended for safari bookings.
+        </p>
+        <div className="mt-8 flex items-center gap-4">
+          <div className="w-12 h-12 rounded-full bg-green-700 flex items-center justify-center text-white font-bold">J</div>
+          <div>
+            <h4 className="font-bold text-gray-900">Jeff Ndilai</h4>
+            <p className="text-sm text-gray-500">Local Guide</p>
+          </div>
+        </div>
+      </div>
 
     </div>
 
     {/* BUTTONS */}
-    <div className="flex justify-center gap-6 mt-16 flex-wrap">
+    <div className="flex flex-wrap justify-center gap-6 mt-16">
 
       <a
         href="https://search.google.com/local/writereview?placeid=ChIJj5Qk8H7FLxgR_6uAYZFoTn4"
         target="_blank"
         rel="noreferrer"
-        className="group relative overflow-hidden bg-green-700 text-white px-10 py-4 rounded-full font-bold shadow-lg hover:scale-110 transition duration-300"
+        className="bg-green-700 text-white px-10 py-4 rounded-full font-bold shadow-lg hover:scale-105 transition"
       >
-        <span className="relative z-10">
-          {t("writeReview")}
-        </span>
-
-        <span className="absolute inset-0 bg-green-900 translate-x-[-100%] group-hover:translate-x-0 transition duration-500"></span>
+        Write a Review
       </a>
 
       <a
         href="https://search.google.com/local/reviews?placeid=ChIJj5Qk8H7FLxgR_6uAYZFoTn4"
         target="_blank"
         rel="noreferrer"
-        className="border-2 border-green-700 text-green-700 px-10 py-4 rounded-full font-bold hover:bg-green-700 hover:text-white hover:scale-110 transition duration-300"
+        className="border-2 border-green-700 text-green-700 px-10 py-4 rounded-full font-bold hover:bg-green-700 hover:text-white hover:scale-105 transition"
       >
-        {t("viewAllReviews")}
+        View All Reviews
       </a>
 
     </div>

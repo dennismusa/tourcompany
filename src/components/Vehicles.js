@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import image5 from "../assets/image5.jpg";
 import image6 from "../assets/image6.jpg";
 import image7 from "../assets/image7.jpg";
-import image8 from "../assets/image8.jpg";
+import image0 from "../assets/image0.jpg";
 import cruiser1 from "../assets/cruiser1.jpg";
 import cruiser2 from "../assets/cruiser2.jpg";
 import safarivan from "../assets/safarivan.jpg";
@@ -63,7 +63,7 @@ function FleetShowcase() {
     {
       name: "Extended Safari Van",
       image: cruiser2,
-      gallery: [image8, image8],
+      gallery: [image5, image5],
       seats: "10 Seats",
       type: "Group Tour Vehicle",
       price: "270  ",
@@ -111,7 +111,7 @@ function FleetShowcase() {
         {/* background */}
         <div className="absolute inset-0">
           <img
-            src={image8}
+            src={image0}
             alt="Safari Fleet"
             className="w-full h-full object-cover"
           />

@@ -7,51 +7,160 @@
   "book": "Safari buchen",
   "bookNow": "Jetzt Safari buchen",
 
-  "heroTitle": "Entdecken Sie Kenia mit Luxus-Safari-Fahrzeugen",
-  "heroDesc": "Entdecken Sie Kenia und Ostafrika mit erstklassigen Safari-Erlebnissen, komfortablen Fahrzeugen und erfahrenen lokalen Reiseleitern. Genießen Sie sichere, zuverlässige und unvergessliche Reisen durch die berühmtesten Wildtiergebiete Afrikas.",
+  "heroTitle": "Entdecken Sie Kenia mit luxuriösen Safari-Fahrzeugen",
+  "heroDesc": "Entdecken Sie Kenia und Ostafrika mit erstklassigen Safari-Erlebnissen, komfortablen Fahrzeugen und erfahrenen lokalen Guides. Genießen Sie sichere, zuverlässige und unvergessliche Reisen zu den berühmtesten Wildtierdestinationen.",
 
   "aboutTitle": "Über Renlen Tours Safari",
-  "aboutText": "Wir bieten unvergessliche Safari-Erlebnisse in Kenia mit professionellen Guides und komfortablen Fahrzeugen.",
+  "aboutText": "Wir schaffen unvergessliche Safari-Erlebnisse in Kenia und Ostafrika mit professionellen Guides, luxuriösen Fahrzeugen und sorgfältig geplanten Reiseabenteuern.",
+
+  "aboutLabel": "ÜBER RENLEN TOURS",
+
+  "aboutHeading1": "Reisen Sie",
+  "aboutHeading2": "über das Gewöhnliche hinaus",
+
+  "aboutDescription": "Renlen Tours und Safaris bietet unvergessliche Wildtier-Erlebnisse in Kenia und Ostafrika mit Premium-Fahrzeugen, erfahrenen Guides und individuell gestalteten Safari-Paketen.",
+
+  "aboutDescription2": "Erkunden Sie Maasai Mara, Tsavo, Serengeti und Sansibar mit Komfort, Sicherheit und authentischen Abenteuern.",
+
+  "luxuryVehicles": "Luxuriöse Safari-Fahrzeuge",
+  "luxuryVehiclesDesc": "Moderne Land Cruiser und Safari-Fahrzeuge.",
+
+  "professionalGuides": "Professionelle Guides",
+  "professionalGuidesDesc": "Lokale Experten mit umfassender Wildtiererfahrung.",
+
+  "eastAfricaAdventure": "Ostafrika Abenteuer",
+  "eastAfricaAdventureDesc": "Kombinierte Safari-Pakete in Kenia und Tansania.",
+
+  "aboutSubtitle": "Reisen Sie über gewöhnliche Erlebnisse hinaus",
+
+  "featureLuxuryVehiclesTitle": "Luxuriöse Safari-Fahrzeuge",
+  "featureLuxuryVehiclesDesc": "Moderne Land Cruiser und komfortable Safari-Fahrzeuge.",
+
+  "featureGuidesTitle": "Professionelle Guides",
+  "featureGuidesDesc": "Lokale Experten mit tiefem Wissen über die Tierwelt.",
+
+  "featureEastAfricaTitle": "Ostafrika Abenteuer",
+  "featureEastAfricaDesc": "Kombinierte Safari-Erlebnisse in Kenia und Tansania.",
 
   "destinationTitle": "Entdecken Sie unsere Reiseziele",
-  "servicesTitle": "Unsere Safari-Dienstleistungen",
-  "contactTitle": "Kontaktieren Sie uns",
-  "footerText": "Erleben Sie die Schönheit Kenias mit uns.",
+  "destinationSubtitle": "Ausgewählte Safari-Ziele in Ostafrika",
 
   "amboseli": "Amboseli Nationalpark",
-  "tsavoEast": "Tsavo-Ost-Nationalpark",
-  "tsavoWest": "Tsavo-West-Nationalpark",
+  "amboseliDesc": "Elefanten mit Blick auf den Kilimandscharo.",
+
+  "tsavoEast": "Tsavo-Ost Nationalpark",
+  "tsavoEastDesc": "Rote Elefanten und riesige Wildnislandschaften.",
+
+  "tsavoWest": "Tsavo-West Nationalpark",
+  "tsavoWestDesc": "Beeindruckende Landschaften und vulkanische Gebiete.",
+
   "nairobiPark": "Nairobi Nationalpark",
-  "lakeNakuru": "Lake-Nakuru-Nationalpark",
+  "nairobiParkDesc": "Wildtiere direkt vor der Skyline der Stadt.",
+
+  "lakeNakuru": "Lake-Nakuru Nationalpark",
+  "lakeNakuruDesc": "Flamingos, Nashörner und atemberaubende Rift-Valley-Ausblicke.",
+
   "mountKenya": "Mount Kenya",
+  "mountKenyaDesc": "Alpine Landschaften und wunderschöne Wanderwege.",
 
-  "readMore": "Mehr erfahren",
-  "bookTour": "Tour buchen",
+  "maasaiMara": "Maasai Mara Nationalreservat",
+  "maasaiMaraDesc": "Heimat der Big Five und der großen Tierwanderung.",
 
-"unveilingTitle": "Ostafrika entdecken",
-  "exploreAfrica": "Entdecke Afrikas",
+  "serengeti": "Serengeti (Tansania)",
+  "serengetiDesc": "Endlose Ebenen und weltberühmte Tiermigration.",
+
+  "trekTitle": "Trekking & Bergsteigen in Ostafrika",
+  "trekDesc": "Entdecken Sie berühmte Berge, Vulkankrater und beeindruckende Landschaften.",
+
+  "kilimanjaro": "Mount Kilimandscharo",
+  "kilimanjaroDesc": "Afrikas höchster Berg mit weltberühmten Trekkingrouten.",
+
+  "mountLongonot": "Mount Longonot",
+  "mountLongonotDesc": "Vulkanwanderung mit spektakulären Rift-Valley-Ausblicken.",
+
+  "hellsGate": "Hell’s Gate Nationalpark",
+  "hellsGateDesc": "Ein einzigartiges Abenteuer mit Wandern, Radfahren, Schluchten und vulkanischen Landschaften.",
+
+  "whyChoose": "Warum uns wählen",
+  "whyChooseTitle": "Mehr als eine Safari",
+  "whyChooseSubtitle": "Ein unvergessliches Erlebnis",
+  "whyChooseDesc": "Wir bieten persönliche Safari-Reisen mit Komfort, Sicherheit und lokalem Expertenwissen.",
+
+  "comfort": "Komfortable Safari-Fahrzeuge",
+  "guides": "Professionelle lokale Guides",
+  "experience": "Jahre Safari-Erfahrung",
+  "safety": "Sicherheit und Zuverlässigkeit",
+
+  "trekCta": "Planen Sie Ihr Trekking-Abenteuer",
+
+  "whyChooseUs": "Warum uns wählen",
+  "whyTitlePart1": "Mehr als eine Safari,",
+  "whyTitleHighlight": "ein Erlebnis",
+
+  "whyDescription": "Wir gestalten unvergessliche Reisen mit lokalem Wissen, luxuriösem Komfort und individuellen Abenteuern nach Ihren Reisewünschen.",
+
+  "expertGuidesTitle": "Erfahrene Guides",
+
+  "luxuryTravelTitle": "Luxusreisen",
+  "luxuryTravelDesc": "Komfortable Safari-Fahrzeuge für Abenteuer und lange Reisen.",
+
+  "ecoTourismTitle": "Ökotourismus",
+  "ecoTourismDesc": "Unterstützung von Naturschutz und lokalen Gemeinden in Kenia.",
+
+  "trustedServiceTitle": "Vertrauenswürdiger Service",
+  "trustedServiceDesc": "Viele Reisende vertrauen jedes Jahr unseren Safari-Erlebnissen.",
+
+  "reviewsTitle": "Gästebewertungen",
+  "reviewsSubtitle": "Echte Erfahrungen unserer Gäste",
+  "ratingText": "4,7 Bewertung • Google Bewertungen",
+  "writeReview": "Google Bewertung schreiben",
+  "viewReviews": "Alle Bewertungen ansehen",
+
+  "footerText": "Erleben Sie die Schönheit Kenias mit uns.",
+
+  "unveilingTitle": "Ostafrika entdecken",
+  "exploreAfrica": "Erkunden Sie Afrikas",
   "iconicDestinations": "Ikonische Reiseziele",
-  "scrollDescription": "Entdecke kuratierte Safari-Erlebnisse in Kenia, Tansania, Uganda und darüber hinaus.",
+  "scrollDescription": "Entdecken Sie ausgewählte Safari-Erlebnisse in Kenia, Tansania, Uganda und darüber hinaus.",
 
-  "migrationTitle": "Gnu-Migration",
+  "migrationTitle": "Gnu-Wanderung",
   "migrationTrips": "6 Reisen",
   "migrationDesc": "Serengeti & Große Migration",
 
-  "gorillaTitle": "Uganda Gorillatrekking",
+  "gorillaTitle": "Uganda Gorilla Trekking",
   "gorillaTrips": "4 Reisen",
-  "gorillaDesc": "Regenwald-Erlebnisse",
+  "gorillaDesc": "Begegnungen im Regenwald",
 
   "kenyaTitle": "Kenia Safaris",
   "kenyaTrips": "23 Reisen",
-  "kenyaDesc": "Big Five im Masai Mara",
+  "kenyaDesc": "Maasai Mara Big Five",
 
   "serengetiTitle": "Serengeti Erlebnis",
-  "serengetiTrips": "8 Reisen",
-  "serengetiDesc": "Endlose Savannen",
 
-  "rwenzoriTitle": "Rwenzori Pfade",
+  "exploreEastAfrica": "Ostafrika entdecken",
+
+  "destinationsTitlePart1": "Reiseziele für",
+  "destinationsTitleHighlight": "unvergessliche Abenteuer",
+
+  "destinationsDesc": "Entdecken Sie ausgewählte Safari-Ziele in Kenia und Tansania mit einzigartiger Tierwelt, atemberaubenden Landschaften und kulturellen Erlebnissen.",
+
+  "nakuruDesc": "Flamingos, Nashörner und beeindruckende Rift-Valley-Landschaften in einem einzigartigen Ökosystem.",
+
+  "tsavo": "Tsavo Nationalpark",
+  "tsavoDesc": "Eine der größten Wildnisregionen Afrikas mit berühmten roten Elefanten.",
+
+  "tailoredSafaris": "Individuelle Safaris",
+  "tailoredSafarisDesc": "Jede Reise wird nach Ihrem Stil, Ihren Interessen und Ihrem Budget gestaltet.",
+
+  "kenyaTanzania": "Kenia & Tansania",
+  "kenyaTanzaniaDesc": "Nahtlose Safari-Erlebnisse über Ostafrika hinweg.",
+
+  "expertGuides": "Experten-Guides",
+  "expertGuidesDesc": "Professionelle lokale Guides mit umfangreicher Safari-Erfahrung.",
+
+  "rwenzoriTitle": "Rwenzori Trails",
   "rwenzoriTrips": "3 Reisen",
-  "rwenzoriDesc": "Bergwanderungen",
+  "rwenzoriDesc": "Bergwanderwege",
 
   "tanzaniaTitle": "Tansania Safaris",
   "tanzaniaTrips": "6 Reisen",
@@ -63,77 +172,29 @@
   "iconic": "Ikonisch",
   "hiking": "Wandern",
 
-  "swipeMore": "Wischen für mehr",
-
-  "location": "Standort",
-  "phone": "Telefon",
-  "email": "E-Mail",
-
-  
-  "bookTourCta": "Tour buchen",
-  "viewMore": "Mehr anzeigen",
-
- 
-  "aboutSubtitle": "RENLEN TOURS",
-  "aboutHeading": "Reise über das Gewöhnliche hinaus",
-  "aboutParagraph": "Renlen Tours and Safaris schafft unvergessliche Wildtiererlebnisse in Kenia und Ostafrika mit Premium-Fahrzeugen, erfahrenen Guides und sorgfältig geplanten Safari-Paketen.",
-  "feature1Title": "Luxus-Safari-Fahrzeuge",
-  "feature1Desc": "Moderne Land Cruiser und Safari-Vans.",
-  "feature2Title": "Professionelle Guides",
-  "feature2Desc": "Lokale Experten mit umfassender Wildtiererfahrung.",
-  "feature3Title": "Ostafrika-Abenteuer",
-  "feature3Desc": "Safari-Pakete in Kenia und Tansania.",
-
- 
-  "whyChooseUs": "Warum uns wählen",
-  "whyTitlePart1": "Mehr als eine Safari,",
-  "whyTitleHighlight": "ein Erlebnis",
-  "whyDescription": "Wir schaffen unvergessliche Reisen mit lokaler Expertise, luxuriösem Komfort und individuell gestalteten Abenteuern.",
-
-  "expertGuidesTitle": "Erfahrene Guides",
-  "expertGuidesDesc": "Professionelle lokale Guides mit umfassendem Wissen über Wildtiere und Safaris.",
-
-  "luxuryTravelTitle": "Luxusreisen",
-  "luxuryTravelDesc": "Komfortable Safari-Fahrzeuge für Abenteuer und lange Reisen.",
-
-  "ecoTourismTitle": "Ökotourismus",
-  "ecoTourismDesc": "Unterstützung von Naturschutz und lokalen Gemeinden in Kenia.",
-
-  "trustedServiceTitle": "Vertrauenswürdiger Service",
-  "trustedServiceDesc": "Hunderttausende Reisende vertrauen unseren Safari-Erlebnissen jedes Jahr.",
-
- 
-  "reviewsBadge": "Reisebewertungen",
-  "reviewsTitle": "Was unsere Reisenden sagen",
-  "reviewsSubtitle": "Echte Erfahrungen von Gästen, die Kenia mit Renlen Tours und Safaris erkundet haben.",
-  "reviewsRating": "4.7 Bewertung • 3 Google-Bewertungen",
-
-  "review1": "Renlen Tours ist der beste Reiseveranstalter in Kenia für Safari-Erlebnisse.",
-  "review2": "Unglaubliche Erfahrung und großartiger Service von Renlen Tours and Safaris.",
-  "review3": "Hervorragende Safari-Erfahrung. Sehr empfehlenswert.",
-
-  "writeReview": "Google Bewertung schreiben",
-  "viewAllReviews": "Alle Bewertungen ansehen",
-
-  
   "footerBrand": "Renlen Tours und Safaris",
-  "footerDeveloper": "Website entworfen & entwickelt von Dennis Musa",
-  "footerDescription": "Professionelle Safari-Fahrzeugvermietung in Kajiado, Kenia. Sicher, komfortabel und unvergesslich.",
+  "footerDeveloper": "Website gestaltet & entwickelt von Dennis Musa",
+  "footerDescription": "Professionelle Safari-Fahrzeugvermietung in Kajiado, Kenia. Sichere, komfortable und unvergessliche Safari-Erlebnisse.",
+
   "footerPortfolio": "Entwickler-Portfolio ansehen",
 
-  "quickLinks": "Schnelllinks",
+  "quickLinks": "Schnellzugriff",
+  "fleet": "Fahrzeugflotte",
+
   "services": "Dienstleistungen",
-  "contactInfo": "Kontaktinformationen",
 
   "service1": "Safari-Fahrzeugvermietung",
   "service2": "Flughafentransfers",
-  "service3": "Gruppentouren",
-  "service4": "Private Safaris",
+  "service3": "Gruppenreisen",
+  "service4": "Private Safari-Reisen",
+
+  "contactInfo": "Kontaktinformationen",
+
+  "location": "📍 Kajiado, Kenia",
+  "phone": "📞 +254717554177",
+  "email": "✉ renlentours@gmail.com",
 
   "whatsappBooking": "WhatsApp Buchung",
+
   "footerBottom": "© 2026 Renlen Tours und Safaris. Alle Rechte vorbehalten."
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 9bc003f (deploy)
