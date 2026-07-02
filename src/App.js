@@ -4,7 +4,7 @@ import Navbar from "./components/Navbar";
 //import BookingPage from "./components/Bookingpage";
 import Home from "./components/Home";
 import WhatsAppButton from "./components/WhatsAppButton";
-
+import Packages from "./components/Packages";
 import Vehicles from "./components/Vehicles";
 import Destinations from "./components/Destinations";
 import Gallery from "./components/Gallery";
@@ -17,6 +17,7 @@ import Hellsgate from "./destination/Hellsgate";
 import Tsavoeast from "./destination/Tsavoeast";
 import Tsavowest from "./destination/Tsavowest";
 import LakeNakuru from "./destination/LakeNakuru";
+
 import Meru from "./destination/Meru";
 import "./i18n";
 
@@ -40,6 +41,7 @@ function App() {
             <Route path="/:lang/destinations" element={<Destinations />} />
             <Route path="/:lang/gallery" element={<Gallery />} />
             <Route path="/:lang/contact" element={<Contact />} />
+            <Route path="/:lang/packages" element={<Packages />} />
 
             {/* BACKWARD COMPATIBILITY (optional) */}
             <Route path="/home" element={<Navigate to="/en/home" />} />
@@ -48,6 +50,7 @@ function App() {
             <Route path="/destinations" element={<Navigate to="/en/destinations" />} />
             <Route path="/gallery" element={<Navigate to="/en/gallery" />} />
             <Route path="/contact" element={<Navigate to="/en/contact" />} />
+            <Route path="/packages" element={<Navigate to="/en/packages" />} />
              <Route path="/aberdare" element={<Aberdare />} />
    <Route path="/amboseli" element={<Amboseli />} />
    <Route path="/nairobipark" element={<Nairobipark />} />
@@ -58,7 +61,7 @@ function App() {
    
    <Route path="/tsavowest" element={<Tsavowest />} />
    <Route path="/lakenakuru" element={<LakeNakuru />} />
-   <Route path="/Meru" element={<Meru />} />
+   <Route path="/meru" element={<Meru />} />
 
           </Routes>
           {/* FLOATING WHATSAPP BUTTON */}
