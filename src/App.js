@@ -3,24 +3,24 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
 //import BookingPage from "./components/Bookingpage";
-//import Home from "./components/Home";
-import SubscriptionExpired from "./components/SubscriptionExpired";
+import Home from "./components/Home";
+//import SubscriptionExpired from "./components/SubscriptionExpired";
 import WhatsAppButton from "./components/WhatsAppButton";
-//import Packages from "./components/Packages";
-//import Vehicles from "./components/Vehicles";
-//import Destinations from "./components/Destinations";
-//import Gallery from "./components/Gallery";
-//import Contact from "./components/Contact";
-//import Aberdare from "./destination/Aberdare";
-//import Amboseli from "./destination/Amboseli";
-//import Nairobipark from "./destination/Nairobipark";
-//import Mountkenya from "./destination/Mountkenya";
-//import Hellsgate from "./destination/Hellsgate";
-//import Tsavoeast from "./destination/Tsavoeast";
-//import Tsavowest from "./destination/Tsavowest";
-//import LakeNakuru from "./destination/LakeNakuru";
+import Packages from "./components/Packages";
+import Vehicles from "./components/Vehicles";
+import Destinations from "./components/Destinations";
+import Gallery from "./components/Gallery";
+import Contact from "./components/Contact";
+import Aberdare from "./destination/Aberdare";
+import Amboseli from "./destination/Amboseli";
+import Nairobipark from "./destination/Nairobipark";
+import Mountkenya from "./destination/Mountkenya";
+import Hellsgate from "./destination/Hellsgate";
+import Tsavoeast from "./destination/Tsavoeast";
+import Tsavowest from "./destination/Tsavowest";
+import LakeNakuru from "./destination/LakeNakuru";
 
-//import Meru from "./destination/Meru";
+import Meru from "./destination/Meru";
 import "./i18n";
 
 function App() {
@@ -33,17 +33,17 @@ function App() {
         <main className="pt-20">
 
 
-          <Routes>
+{/*          <Routes>
   <Route path="*" element={<SubscriptionExpired />} />
 </Routes>
-
-        {/*   <Routes>         
+*/}
+           <Routes>         
 
             {/* DEFAULT REDIRECT */}
-         {/*    <Route path="/" element={<Navigate to="/en/home" />} />
+             <Route path="/" element={<Navigate to="/en/home" />} />
 
             {/* MULTILINGUAL ROUTES */}
-           {/*  <Route path="/:lang/home" element={<Home />} />
+             <Route path="/:lang/home" element={<Home />} />
             <Route path="/:lang/vehicles" element={<Vehicles />} />
             <Route path="/:lang/destinations" element={<Destinations />} />
             <Route path="/:lang/gallery" element={<Gallery />} />
@@ -51,7 +51,7 @@ function App() {
             <Route path="/:lang/packages" element={<Packages />} />
 
             {/* BACKWARD COMPATIBILITY (optional) */}
-           {/*  <Route path="/home" element={<Navigate to="/en/home" />} />
+             <Route path="/home" element={<Navigate to="/en/home" />} />
             <Route path="/vehicles" element={<Navigate to="/en/vehicles" />} />
             <Route path="/bookingpage" element={<Navigate to="/en/bookingpage" />} />
             <Route path="/destinations" element={<Navigate to="/en/destinations" />} />
